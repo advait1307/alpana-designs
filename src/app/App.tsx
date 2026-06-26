@@ -58,7 +58,7 @@ export default function App() {
           background: C.merino,
         }}
       >
-        {page === "home" && <HomePage go={navigate} />}
+        {page === "home" && <HomePage go={navigate} goToProject={goToProject} />}
         {page === "studio" && <StudioPage />}
         {page === "work" && <WorkPage onProjectSelect={goToProject} />}
         {page === "contact" && <ContactPage />}

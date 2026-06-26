@@ -2,7 +2,7 @@ import { ImageWithFallback } from "@/components/ui/ImageWithFallback";
 import { NavItem } from "@/components/ui/NavItem";
 import { STUDIO_SHORT } from "@/constants/brand";
 import { C } from "@/constants/colors";
-import logoSrc from "@/images/logo.PNG";
+import logoSrc from "@/images/logo.png";
 import type { Page } from "@/types";
 
 interface FooterProps {
@@ -20,9 +20,9 @@ export function Footer({ go }: FooterProps) {
     <footer style={{ background: C.rifleGreen }}>
       <div
         className="mx-auto"
-        style={{ maxWidth: "1280px", padding: "64px 32px 40px" }}
+        style={{ maxWidth: "1280px", padding: "6px 32px 40px" }}
       >
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-8 pb-10">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
           <button
             onClick={() => navigate("home")}
             style={{ background: "none", border: "none", cursor: "pointer", padding: 0, lineHeight: 0 }}
@@ -32,19 +32,19 @@ export function Footer({ go }: FooterProps) {
               style={{
                 display: "inline-flex",
                 alignItems: "center",
-                background: C.merino,
-                padding: "6px 16px",
+                // padding: "4px 12px",
               }}
             >
               <ImageWithFallback
                 src={logoSrc}
                 alt="Alpana S. Design wordmark"
                 style={{
-                  height: "28px",
+                  height: "200px",
                   width: "auto",
                   display: "block",
                   objectFit: "contain",
-                  mixBlendMode: "multiply",
+                  clipPath: "inset(50px 0 50px 0)",
+                  filter: "invert(1)",
                 }}
               />
             </span>
@@ -101,7 +101,7 @@ export function Footer({ go }: FooterProps) {
               color: C.oyster,
             }}
           >
-            © 2025 {STUDIO_SHORT}. All rights reserved.
+            © 2026 {STUDIO_SHORT}. All rights reserved.
           </p>
         </div>
       </div>

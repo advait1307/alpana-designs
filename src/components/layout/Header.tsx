@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { ImageWithFallback } from "@/components/ui/ImageWithFallback";
 import { NavItem } from "@/components/ui/NavItem";
 import { C } from "@/constants/colors";
-import logoSrc from "@/images/logo.PNG";
+import logoSrc from "@/images/logo.png";
 import type { Page } from "@/types";
 
 
@@ -58,7 +58,7 @@ export function Header({ current, go }: HeaderProps) {
               src={logoSrc}
               alt="Alpana S. Design wordmark"
               style={{
-                height: "40px",
+                height: "204px",
                 width: "auto",
                 display: "block",
                 mixBlendMode: "multiply",

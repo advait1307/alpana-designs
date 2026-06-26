@@ -218,6 +218,16 @@ Every space is designed with intent, allowing refined aesthetics to emerge natur
                 role: "Project Manager",
                 img: "https://images.unsplash.com/photo-1600896997793-b8ed3459a17f?w=500&h=500&fit=crop&auto=format",
               },
+            ].map((member, i) => (
+              <Reveal key={i} delay={i * 80}>
+                <TeamCard member={member} />
+              </Reveal>
+            ))}
+            <div className="hidden md:block"></div>
+          </div>
+          {/* Second row: only 2 members, centered */}
+          <div className="flex flex-col md:flex-row justify-center gap-10 mt-10">
+            {[
               {
                 name: "Saroj Kamble",
                 role: "Senior Designer",
@@ -227,11 +237,13 @@ Every space is designed with intent, allowing refined aesthetics to emerge natur
                 name: "Rutuja Ghoge",
                 role: "Junior Designer",
                 img: "https://images.unsplash.com/photo-1600896997793-b8ed3459a17f?w=500&h=500&fit=crop&auto=format",
-              }
+              },
             ].map((member, i) => (
-              <Reveal key={i} delay={i * 80}>
-                <TeamCard member={member} />
-              </Reveal>
+              <div key={i} className="w-full md:w-[calc((100%-2*2.5rem)/3)]">
+                <Reveal delay={i * 80}>
+                  <TeamCard member={member} />
+                </Reveal>
+              </div>
             ))}
           </div>
         </div>

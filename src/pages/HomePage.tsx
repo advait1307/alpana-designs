@@ -6,16 +6,26 @@ import { TextLink } from "@/components/home/TextLink";
 import { FOUNDER } from "@/constants/brand";
 import { C } from "@/constants/colors";
 import { homeProjects } from "@/data/homeProjects";
-import type { Page } from "@/types";
+import { portfolioTiles } from "@/data/portfolioTiles";
+import type { Page, Tile } from "@/types";
+import homepg from "@/images/HomePage.jpeg";
 
 interface HomePageProps {
   go: (p: Page) => void;
+  goToProject: (t: Tile) => void;
 }
 
-export function HomePage({ go }: HomePageProps) {
+export function HomePage({ go, goToProject }: HomePageProps) {
   const navigate = (p: Page) => {
     go(p);
     window.scrollTo(0, 0);
+  };
+
+  const handleProjectClick = (projectName: string) => {
+    const project = portfolioTiles.find((t) => t.name === projectName);
+    if (project) {
+      goToProject(project);
+    }
   };
 
   return (
@@ -24,18 +34,18 @@ export function HomePage({ go }: HomePageProps) {
       <section
         style={{
           display: "flex",
-          minHeight: "100vh",
+          minHeight: "50vh",
           background: C.merino,
         }}
       >
         <div
           className="hidden md:block"
-          style={{ width: "55%", flexShrink: 0, overflow: "hidden", background: C.kangaroo }}
+          style={{ width: "55%", flexShrink: 0, overflow: "hidden" }}
         >
           <img
-            src="https://images.unsplash.com/photo-1564078516393-cf04bd966897?w=1200&h=900&fit=crop&auto=format"
+            src={homepg}
             alt="Warm afternoon light over a chaise lounge in a minimal interior"
-            style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+            style={{ width: "100%", height: "80%", objectFit: "cover", display: "block" }}
           />
         </div>
 
@@ -44,7 +54,7 @@ export function HomePage({ go }: HomePageProps) {
             flex: 1,
             display: "flex",
             alignItems: "center",
-            padding: "120px 64px 120px 56px",
+            padding: "80px 64px 80px 56px",
           }}
         >
           <div>
@@ -91,7 +101,7 @@ export function HomePage({ go }: HomePageProps) {
       </section>
 
       {/* ── Selected Work ── */}
-      <section style={{ background: C.merino, padding: "120px 0" }}>
+      <section style={{ background: C.merino, padding: "20px 0" }}>
         <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 32px" }}>
           <Reveal>
             <Eyebrow>Selected Projects</Eyebrow>
@@ -102,7 +112,7 @@ export function HomePage({ go }: HomePageProps) {
           >
             {homeProjects.map((proj, i) => (
               <Reveal key={i} delay={i * 80}>
-                <ProjectCard proj={proj} onClick={() => navigate("work")} />
+                <ProjectCard proj={proj} onClick={() => handleProjectClick(proj.name)} />
               </Reveal>
             ))}
           </div>
@@ -114,9 +124,10 @@ export function HomePage({ go }: HomePageProps) {
         </div>
       </section>
 
-      <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 32px" }}>
+      {/* <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 32px" }}>
         <Hairline />
-      </div>
+      </div> */}
+      <br></br>
 
       {/* ── Pull Quote ── */}
       <section style={{ background: C.kangaroo, padding: "120px 32px" }}>
