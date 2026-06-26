@@ -2,7 +2,7 @@ import { ImageWithFallback } from "@/components/ui/ImageWithFallback";
 import { NavItem } from "@/components/ui/NavItem";
 import { STUDIO_SHORT } from "@/constants/brand";
 import { C } from "@/constants/colors";
-import logoSrc from "@/images/logo.png";
+import logoSrc from "@/images/logo1.png";
 import type { Page } from "@/types";
 
 interface FooterProps {

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { ImageWithFallback } from "@/components/ui/ImageWithFallback";
 import { NavItem } from "@/components/ui/NavItem";
 import { C } from "@/constants/colors";
-import logoSrc from "@/images/logo.png";
+import logoSrc from "@/images/logo1.png";
 import type { Page } from "@/types";
 
 
