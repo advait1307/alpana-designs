@@ -197,7 +197,7 @@ Every space is designed with intent, allowing refined aesthetics to emerge natur
                 marginBottom: "56px",
               }}
             >
-              Three people, one way of working: slowly, carefully, and with complete conviction
+              Five people, one way of working: slowly, carefully, and with complete conviction
               in the brief.
             </p>
           </Reveal>

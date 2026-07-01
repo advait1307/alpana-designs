@@ -8,7 +8,7 @@ import { C } from "@/constants/colors";
 import { homeProjects } from "@/data/homeProjects";
 import { portfolioTiles } from "@/data/portfolioTiles";
 import type { Page, Tile } from "@/types";
-import homepg from "@/images/HomePage.jpeg";
+import homepg from "@/images/HomePage1.jpeg";
 
 interface HomePageProps {
   go: (p: Page) => void;
@@ -83,7 +83,7 @@ export function HomePage({ go, goToProject }: HomePageProps) {
                 marginTop: "24px",
               }}
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
+              {/* Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. */}
             </p>
             <div style={{ marginTop: "40px" }}>
               <TextLink onClick={() => navigate("work")}>View our work</TextLink>
@@ -144,7 +144,7 @@ export function HomePage({ go, goToProject }: HomePageProps) {
                 color: C.cedar,
               }}
             >
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+              "Design with Intent."
             </p>
             <p
               style={{
@@ -170,18 +170,18 @@ export function HomePage({ go, goToProject }: HomePageProps) {
             {[
               {
                 numeral: "I",
-                name: "Service 1",
-                desc: "We create private homes that hold the rhythm of daily life — spaces that age gracefully and feel more yours with every year.",
+                name: "End-to-End Consultancy",
+                desc: "Design is more than creating beautiful spaces—it is about crafting environments that reflect your personality and enhance the way you live. From the initial consultation to the final handover, we guide every aspect of your project with precision and care.\nOur end-to-end consultancy covers design strategy, space planning, concept development, material curation, budgeting, vendor coordination, project management, site supervision, and quality assurance. Every detail is thoughtfully managed, ensuring a seamless journey and a home that is both timeless and uniquely yours.",
               },
               {
                 numeral: "II",
-                name: "Service 2",
-                desc: "Offices, galleries, and hospitality environments designed to slow people down and make them look twice at what surrounds them.",
+                name: "Design & Turnkey Execution",
+                desc: "A complete design-to-delivery experience, tailored exclusively for you.\nOur turnkey solutions combine creative excellence with flawless execution, allowing you to enjoy a stress-free transformation of your space. From conceptual design and immersive 3D visualizations to civil modifications, bespoke furniture, lighting, electrical and plumbing works, finishes, furnishings, décor, and final styling, every element is meticulously planned and executed.\nWith a single point of accountability, we deliver interiors that are sophisticated, functional, and move-in ready—crafted with uncompromising attention to quality, craftsmanship, and timelines.",
               },
               {
                 numeral: "III",
-                name: "Service 3",
-                desc: "From brief to blueprint, we work alongside architects to ensure the spatial and material languages speak as one.",
+                name: "Design Consultancy",
+                desc: "For clients who seek exceptional design while preferring to manage execution independently, our consultancy service provides a complete creative roadmap.\nWe develop bespoke concepts supported by detailed layouts, working drawings, furniture planning, lighting design, material palettes, colour schemes, and comprehensive specifications. Every recommendation is carefully curated to ensure your vision is translated into a cohesive, elegant, and highly functional space, giving your execution team the clarity needed to achieve outstanding results.",
               },
             ].map((s, i) => (
               <Reveal key={i} delay={i * 100}>

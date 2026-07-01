@@ -219,7 +219,7 @@ export function ProjectDetailPage({ project, go, goToProject }: ProjectDetailPag
                 >
                   {project.brief}
                 </p>
-                <p
+                {/* <p
                   style={{
                     fontFamily: "'DM Sans', sans-serif",
                     fontWeight: 300,
@@ -231,8 +231,8 @@ export function ProjectDetailPage({ project, go, goToProject }: ProjectDetailPag
                   }}
                 >
                   Our Approach
-                </p>
-                <p
+                </p> */}
+                {/* <p
                   style={{
                     fontFamily: "'DM Sans', sans-serif",
                     fontSize: "15px",
@@ -241,7 +241,7 @@ export function ProjectDetailPage({ project, go, goToProject }: ProjectDetailPag
                   }}
                 >
                   {project.approach}
-                </p>
+                </p> */}
               </div>
             </Reveal>
 

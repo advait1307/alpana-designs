@@ -68,7 +68,7 @@ export function Header({ current, go }: HeaderProps) {
           </button>
 
           <div className="hidden md:flex items-center gap-10">
-            {(["work", "studio", "contact"] as Page[]).map((p) => (
+            {(["home", "work", "studio", "contact"] as Page[]).map((p) => (
               <NavItem
                 key={p}
                 label={p.charAt(0).toUpperCase() + p.slice(1)}
