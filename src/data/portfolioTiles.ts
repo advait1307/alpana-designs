@@ -400,7 +400,7 @@ export const portfolioTiles: Tile[] = [
     ],
   },
   {
-    name: "SK House",
+    name: "Modern Chic Living",
     category: "Residential · Goa",
     oneliner: "Designed with a balance of elegance and personality for timeless and uplifting atmosphere.",
     img: skImg,
@@ -411,9 +411,9 @@ export const portfolioTiles: Tile[] = [
       typology: "Residential",
       location: "Ananta, Goa, India",
       yearCompleted: "2023",
-      area: "3,000 sq ft",
-      principal: "Alpana Design",
-      photography: "Alpana Design",
+      // area: "3,000 sq ft",
+      principal: "Alpana S. Design",
+      // photography: "Alpana Design",
     },
     galleryImages: [
       skG1,
