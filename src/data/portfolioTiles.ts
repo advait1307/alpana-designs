@@ -502,8 +502,8 @@ export const portfolioTiles: Tile[] = [
       role: "Homeowner",
       project: "Timeless Neo-Classical Elegance",
     },
-    videoUrl: "https://www.instagram.com/reel/CuWjgWzl2tD/embed",
-    videoDuration: "0:48",
+    // videoUrl: "https://www.instagram.com/reel/CuWjgWzl2tD/embed",
+    // videoDuration: "0:48",
   },
   {
     slug: "modern-chic-living",
