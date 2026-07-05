@@ -2,6 +2,7 @@ import { useNavigate } from "react-router";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Reveal } from "@/components/ui/Reveal";
 import { FlipCard } from "@/components/work/FlipCard";
+import { TestimonialCard } from "@/components/work/TestimonialCard";
 import { C } from "@/constants/colors";
 import { portfolioTiles } from "@/data/portfolioTiles";
 import { paths } from "@/routing/paths";
@@ -16,6 +17,11 @@ export function WorkPage() {
   const col1 = portfolioTiles.filter((_, i) => i % 3 === 0);
   const col2 = portfolioTiles.filter((_, i) => i % 3 === 1);
   const col3 = portfolioTiles.filter((_, i) => i % 3 === 2);
+  
+  const testimonials = portfolioTiles
+    .filter((tile) => tile.testimonial)
+    .map((tile) => ({ testimonial: tile.testimonial!, projectName: tile.name }))
+    .slice(0, 3);
 
   return (
     <div style={{ paddingTop: "72px", background: C.merino }}>
@@ -86,6 +92,44 @@ export function WorkPage() {
           </div>
         </div>
       </section>
+
+      {/* ── Testimonials ── */}
+      {testimonials.length > 0 && (
+        <section style={{ padding: "0 32px 120px", background: C.kangaroo }}>
+          <div style={{ maxWidth: "1280px", margin: "0 auto" }}>
+            <Reveal>
+              <Eyebrow>Client Words</Eyebrow>
+            </Reveal>
+            <Reveal delay={80}>
+              <h2
+                style={{
+                  fontFamily: "'Cormorant Garamond', serif",
+                  fontWeight: 300,
+                  fontSize: "clamp(32px, 4vw, 44px)",
+                  color: C.cedar,
+                  letterSpacing: "0.03em",
+                  marginTop: "14px",
+                }}
+              >
+                What they say.
+              </h2>
+            </Reveal>
+            <div
+              className="grid grid-cols-1 md:grid-cols-3 gap-6"
+              style={{ marginTop: "48px" }}
+            >
+              {testimonials.map((item, i) => (
+                <Reveal key={i} delay={i * 100}>
+                  <TestimonialCard
+                    testimonial={item.testimonial}
+                    projectName={item.projectName}
+                  />
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
     </div>
   );
 }

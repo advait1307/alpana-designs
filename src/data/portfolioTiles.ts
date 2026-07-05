@@ -252,6 +252,12 @@ export const portfolioTiles: Tile[] = [
       anuG14,
       anuG15,
     ],
+    testimonial: {
+      text: "Alpana sukerkar Interiors made the entire design process smooth and enjoyable. Their team understood our vision, communicated clearly, and maintained complete professionalism throughout. The quality of execution and attention to detail were exceptional. The project was delivered on time, and the final outcome exceeded our expectations. We would highly recommend  to anyone looking for beautiful, functional interiors.",
+      author: "Anand & Anuradha Prabhudesai",
+      role: "Homeowners",
+      project: "Earthy Elegance",
+    },
   },
   {
     slug: "modern-minimalistic",
@@ -304,6 +310,12 @@ export const portfolioTiles: Tile[] = [
       khannaHero,
       khannaImg,
     ],
+    testimonial: {
+      text: "The design process was absolutely superb from start to finish. Communication was seamless, with timely responses and an extremely professional approach that aligned perfectly with our expectations. The quality of execution was outstanding, delivering results that met our goals 100%. We would wholeheartedly recommend Alpana and her team to others.",
+      author: "Madhu Khanna",
+      role: "Homeowner",
+      project: "The Gallery",
+    },
   },
   {
     slug: "calm-by-design",
@@ -365,6 +377,12 @@ export const portfolioTiles: Tile[] = [
       nileshG13,
       nileshG14,
     ],
+    testimonial: {
+      text: "We had an absolutely wonderful experience working with Alpana and her team on for our Ananta House. From the very beginning, they understood our vision and made the entire design and execution process smooth, enjoyable, and collaborative.Their communication was excellent—they were always responsive, kept us updated at every stage, and were open to our ideas while offering valuable suggestions of their own. The attention to detail and quality of workmanship exceeded our expectations, and the final result is something we're truly proud of.What impressed us even more was their professionalism in sticking to the agreed timeline without compromising on quality. We couldn't be happier with the outcome and would wholeheartedly recommend Alpana and her team to anyone planning to renovate or design their home.",
+      author: "Nilesh & Sonali Amonkar",
+      role: "Homeowners",
+      project: "A Vanilla Comfort",
+    },
   },
   {
     slug: "minimalistic-aboard",
@@ -470,6 +488,12 @@ export const portfolioTiles: Tile[] = [
       surekaG10,
       surekaG11,
     ],
+    testimonial: {
+      text: "The elegance of this home exceeds our expectations. Alpana's vision for timeless luxury has created a space we're proud to call home.",
+      author: "Rajkumar Sureka",
+      role: "Homeowner",
+      project: "Timeless Neo-Classical Elegance",
+    },
   },
   {
     slug: "modern-chic-living",

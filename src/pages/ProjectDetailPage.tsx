@@ -436,7 +436,7 @@ export function ProjectDetailPage({ project }: ProjectDetailPageProps) {
                   fontFamily: "'Cormorant Garamond', serif",
                   fontStyle: "italic",
                   fontWeight: 300,
-                  fontSize: "clamp(20px, 2.8vw, 32px)",
+                  fontSize: "clamp(20px, 2.8vw, 20px)",
                   color: C.cedar,
                   lineHeight: 1.55,
                   position: "relative",
@@ -448,60 +448,29 @@ export function ProjectDetailPage({ project }: ProjectDetailPageProps) {
 
             <div style={{ height: "48px" }} />
 
-            <div
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "16px",
-              }}
-            >
-              <div
+            <div style={{ textAlign: "center" }}>
+              <p
                 style={{
-                  width: "48px",
-                  height: "48px",
-                  borderRadius: "50%",
-                  background: C.oyster,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  flexShrink: 0,
+                  fontFamily: "'DM Sans', sans-serif",
+                  fontWeight: 500,
+                  fontSize: "14px",
+                  color: C.cedar,
                 }}
               >
-                <span
-                  style={{
-                    fontFamily: "'DM Sans', sans-serif",
-                    fontSize: "9px",
-                    color: "#FFFFFF",
-                    letterSpacing: "0.06em",
-                  }}
-                >
-                  Photo
-                </span>
-              </div>
-              <div style={{ textAlign: "left" }}>
-                <p
-                  style={{
-                    fontFamily: "'DM Sans', sans-serif",
-                    fontWeight: 500,
-                    fontSize: "14px",
-                    color: C.cedar,
-                  }}
-                >
-                  {project.testimonial?.author}
-                </p>
-                <p
-                  style={{
-                    fontFamily: "'DM Sans', sans-serif",
-                    fontSize: "10px",
-                    letterSpacing: "0.12em",
-                    textTransform: "uppercase",
-                    color: C.oyster,
-                    marginTop: "4px",
-                  }}
-                >
-                  {project.testimonial?.role} · {project.testimonial?.project}
-                </p>
-              </div>
+                {project.testimonial?.author}
+              </p>
+              <p
+                style={{
+                  fontFamily: "'DM Sans', sans-serif",
+                  fontSize: "10px",
+                  letterSpacing: "0.12em",
+                  textTransform: "uppercase",
+                  color: C.oyster,
+                  marginTop: "4px",
+                }}
+              >
+                {project.testimonial?.role} · {project.testimonial?.project}
+              </p>
             </div>
 
             <div style={{ marginTop: "28px", display: "flex", justifyContent: "center", gap: "6px" }}>
