@@ -18,6 +18,7 @@ export function ProjectDetailPage({ project }: ProjectDetailPageProps) {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
   const [videoPlaying, setVideoPlaying] = useState(false);
+  const isInstagramVideo = project.videoUrl?.includes('instagram.com');
   const [nextHov, setNextHov] = useState(false);
 
   const currentIdx = portfolioTiles.findIndex((t) => t.name === project.name);
@@ -346,8 +347,16 @@ export function ProjectDetailPage({ project }: ProjectDetailPageProps) {
             </h2>
           </Reveal>
           <Reveal delay={120}>
-            <div style={{ position: "relative", width: "100%", aspectRatio: "16/9" }}>
-              {videoPlaying && project.videoUrl ? (
+            <div style={{ position: "relative", width: "100%", aspectRatio: isInstagramVideo ? "9/16" : "16/9", maxWidth: isInstagramVideo ? "400px" : "100%", margin: isInstagramVideo ? "0 auto" : "0" }}>
+              {isInstagramVideo && project.videoUrl ? (
+                <iframe
+                  style={{ width: "100%", height: "100%", border: "none", display: "block" }}
+                  src={project.videoUrl}
+                  title="Project Walkthrough"
+                  allow="autoplay; fullscreen"
+                  scrolling="no"
+                />
+              ) : videoPlaying && project.videoUrl ? (
                 <iframe
                   style={{ width: "100%", height: "100%", border: "none", display: "block" }}
                   src={`${project.videoUrl}?autoplay=1`}

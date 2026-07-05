@@ -215,6 +215,8 @@ export const portfolioTiles: Tile[] = [
       amonkarG4,
       amonkarImg
     ],
+    videoUrl: "https://www.instagram.com/reel/CuWjgWzl2tD/embed",
+    videoDuration: "0:45",
   },
   {
     slug: "earthy-elegance",
@@ -258,6 +260,8 @@ export const portfolioTiles: Tile[] = [
       role: "Homeowners",
       project: "Earthy Elegance",
     },
+    videoUrl: "https://www.instagram.com/reel/CgtT2JvFmf1/embed",
+    videoDuration: "0:52",
   },
   {
     slug: "modern-minimalistic",
@@ -383,6 +387,8 @@ export const portfolioTiles: Tile[] = [
       role: "Homeowners",
       project: "A Vanilla Comfort",
     },
+    videoUrl: "https://www.instagram.com/reel/CuWjgWzI2tD/embed",
+    videoDuration: "1:02",
   },
   {
     slug: "minimalistic-aboard",
@@ -455,6 +461,8 @@ export const portfolioTiles: Tile[] = [
       sundarImg,
       sundarG4,
     ],
+    videoUrl: "https://www.instagram.com/reel/CrIkKsRLifJ/embed",
+    videoDuration: "1:05",
   },
   {
     slug: "timeless-neo-classical-elegance",
@@ -494,6 +502,8 @@ export const portfolioTiles: Tile[] = [
       role: "Homeowner",
       project: "Timeless Neo-Classical Elegance",
     },
+    videoUrl: "https://www.instagram.com/reel/CuWjgWzl2tD/embed",
+    videoDuration: "0:48",
   },
   {
     slug: "modern-chic-living",
@@ -556,6 +566,8 @@ export const portfolioTiles: Tile[] = [
       udayG8,
       udayG9,
     ],
+    videoUrl: "https://www.instagram.com/reel/CoUICJ8O2qf/embed",
+    videoDuration: "0:58",
   },
   {
     slug: "warm-contemporary-living",
