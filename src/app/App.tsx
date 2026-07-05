@@ -1,40 +1,52 @@
-import { useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
+import {
+  BrowserRouter,
+  Navigate,
+  Route,
+  Routes,
+  useLocation,
+  useParams,
+} from "react-router";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { C } from "@/constants/colors";
-import { portfolioTiles } from "@/data/portfolioTiles";
+import { getProjectBySlug } from "@/data/portfolioTiles";
 import { ContactPage } from "@/pages/ContactPage";
 import { HomePage } from "@/pages/HomePage";
 import { ProjectDetailPage } from "@/pages/ProjectDetailPage";
 import { StudioPage } from "@/pages/StudioPage";
 import { WorkPage } from "@/pages/WorkPage";
-import type { Page, Tile } from "@/types";
+import { pageFromPathname, paths } from "@/routing/paths";
 
-export default function App() {
-  const [page, setPage] = useState<Page>("home");
+function ProjectRoute() {
+  const { slug } = useParams<{ slug: string }>();
+  const project = slug ? getProjectBySlug(slug) : undefined;
+
+  if (!project) {
+    return <Navigate to={paths.work} replace />;
+  }
+
+  return <ProjectDetailPage project={project} />;
+}
+
+function AppShell() {
+  const location = useLocation();
   const [opacity, setOpacity] = useState(1);
-  const [currentProject, setCurrentProject] = useState<Tile>(portfolioTiles[0]);
+  const prevPath = useRef(location.pathname);
 
-  const transition = (fn: () => void) => {
-    setOpacity(0);
-    setTimeout(() => {
-      fn();
-      window.scrollTo(0, 0);
-      setOpacity(1);
-    }, 180);
-  };
+  useLayoutEffect(() => {
+    if (prevPath.current !== location.pathname) {
+      setOpacity(0);
+      const timer = window.setTimeout(() => {
+        window.scrollTo(0, 0);
+        setOpacity(1);
+        prevPath.current = location.pathname;
+      }, 180);
+      return () => window.clearTimeout(timer);
+    }
+  }, [location.pathname]);
 
-  const navigate = (p: Page) => {
-    if (p === page) return;
-    transition(() => setPage(p));
-  };
-
-  const goToProject = (t: Tile) => {
-    transition(() => {
-      setCurrentProject(t);
-      setPage("project");
-    });
-  };
+  const currentPage = pageFromPathname(location.pathname);
 
   return (
     <>
@@ -48,7 +60,7 @@ export default function App() {
         @keyframes lbFadeIn { from { opacity: 0; } to { opacity: 1; } }
       `}</style>
 
-      <Header current={page} go={navigate} />
+      <Header current={currentPage} />
 
       <main
         style={{
@@ -58,20 +70,25 @@ export default function App() {
           background: C.merino,
         }}
       >
-        {page === "home" && <HomePage go={navigate} goToProject={goToProject} />}
-        {page === "studio" && <StudioPage />}
-        {page === "work" && <WorkPage onProjectSelect={goToProject} />}
-        {page === "contact" && <ContactPage />}
-        {page === "project" && (
-          <ProjectDetailPage
-            project={currentProject}
-            go={navigate}
-            goToProject={goToProject}
-          />
-        )}
+        <Routes location={location}>
+          <Route path={paths.home} element={<HomePage />} />
+          <Route path={paths.studio} element={<StudioPage />} />
+          <Route path={paths.work} element={<WorkPage />} />
+          <Route path={paths.contact} element={<ContactPage />} />
+          <Route path="/work/:slug" element={<ProjectRoute />} />
+          <Route path="*" element={<Navigate to={paths.home} replace />} />
+        </Routes>
       </main>
 
-      <Footer go={navigate} />
+      <Footer />
     </>
+  );
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <AppShell />
+    </BrowserRouter>
   );
 }

@@ -127,8 +127,71 @@ import udayG7 from "@/images/UDAY/UdayMirror.jpeg";
 import udayG8 from "@/images/UDAY/UdayTV.jpeg";
 import udayG9 from "@/images/UDAY/UdayBathroom.jpeg";
 
+// Baliga House
+import baligaImg from "@/images/BALIGAS/BaligaBed.jpg";
+import baligaHero from "@/images/BALIGAS/BaligaHero.jpg";
+import baligaG1 from "@/images/BALIGAS/BaligaAmbient.jpg";
+import baligaG2 from "@/images/BALIGAS/BaligaBoots.jpg";
+import baligaG3 from "@/images/BALIGAS/BaligaCentreBed.jpg";
+import baligaG4 from "@/images/BALIGAS/BaligaCupboard.jpg";
+import baligaG5 from "@/images/BALIGAS/BaligaDining.jpg";
+import baligaG6 from "@/images/BALIGAS/BaligaDoor.jpg";
+import baligaG7 from "@/images/BALIGAS/BaligaFoodTable.jpg";
+import baligaG8 from "@/images/BALIGAS/BaligaKitchen.jpg";
+import baligaG9 from "@/images/BALIGAS/BaligaMirror.jpg";
+import baligaG10 from "@/images/BALIGAS/BaligaRooms.jpg";
+import baligaG11 from "@/images/BALIGAS/BaligaShowpiece.jpg";
+import baligaG12 from "@/images/BALIGAS/BaligaSide.jpg";
+import baligaG13 from "@/images/BALIGAS/BaligaSofa.jpg";
+import baligaG14 from "@/images/BALIGAS/BaligaSofas.jpg";
+import baligaG15 from "@/images/BALIGAS/BaligaStorage.jpg";
+import baligaG16 from "@/images/BALIGAS/BaligaTable.jpg";
+import baligaG17 from "@/images/BALIGAS/BaligaTea.jpg";
+import baligaG18 from "@/images/BALIGAS/BaligaUnit.jpg";
+
+// Lobbies
+import lobbiesImg from "@/images/LOBBIES/LobbiesB.jpg";
+import lobbiesHero from "@/images/LOBBIES/LobbiesHero.jpg";
+import lobbiesG1 from "@/images/LOBBIES/LobbiesMisc.jpg";
+import lobbiesG2 from "@/images/LOBBIES/Lobbiesentrance.jpg";
+import lobbiesG3 from "@/images/LOBBIES/Lobbieslift.jpg";
+import lobbiesG4 from "@/images/LOBBIES/Lobbieslight.png";
+import lobbiesG5 from "@/images/LOBBIES/Lobbiesnameplate.jpg";
+import lobbiesG6 from "@/images/LOBBIES/Lobbiespassage.jpg";
+import lobbiesG7 from "@/images/LOBBIES/Lobbiesreception.jpg";
+import lobbiesG8 from "@/images/LOBBIES/Lobbiestree.png";
+
+// Office
+import officeImg from "@/images/OFFICE/OfficeChair.jpg";
+import officeHero from "@/images/OFFICE/OfficeHero.jpg";
+import officeG1 from "@/images/OFFICE/Officeconference.JPG";
+import officeG2 from "@/images/OFFICE/Officeentrance.jpg";
+import officeG3 from "@/images/OFFICE/Officegate.jpg";
+import officeG4 from "@/images/OFFICE/Officegod.jpg";
+import officeG5 from "@/images/OFFICE/Officelobby.jpg";
+import officeG6 from "@/images/OFFICE/Officetable.jpg";
+import officeG7 from "@/images/OFFICE/Officetree.jpg";
+import officeG8 from "@/images/OFFICE/Officetv.JPG";
+
+// Sweeta
+import sweetaImg from "@/images/SWEETA/SweetaBed.jpg";
+import sweetaHero from "@/images/SWEETA/SweetaHero.jpg";
+import sweetaG1 from "@/images/SWEETA/SweetaAC.jpg";
+import sweetaG2 from "@/images/SWEETA/SweetaBath.jpg";
+import sweetaG3 from "@/images/SWEETA/SweetaBedding.jpg";
+import sweetaG4 from "@/images/SWEETA/SweetaBedroom.jpg";
+import sweetaG5 from "@/images/SWEETA/SweetaCentre.jpg";
+import sweetaG6 from "@/images/SWEETA/SweetaCushion.jpg";
+import sweetaG7 from "@/images/SWEETA/SweetaDoor.jpg";
+import sweetaG8 from "@/images/SWEETA/SweetaGreyBed.jpg";
+import sweetaG9 from "@/images/SWEETA/SweetaLamp.jpg";
+import sweetaG10 from "@/images/SWEETA/SweetaSide.jpg";
+import sweetaG11 from "@/images/SWEETA/SweetaSofa.jpg";
+import sweetaG12 from "@/images/SWEETA/SweetaSofaCorner.jpg";
+
 export const portfolioTiles: Tile[] = [
   {
+    slug: "the-loft-industrial-retreat",
     name: "The Loft- A Industrial retreat",
     category: "Residential · Goa",
     oneliner: "A contemporary loft space blending industrial elements with warm residential comfort.",
@@ -154,6 +217,7 @@ export const portfolioTiles: Tile[] = [
     ],
   },
   {
+    slug: "earthy-elegance",
     name: "Earthy Elegance",
     category: "Residential · Mumbai",
     oneliner: "A personalized home designed for modern family living with elegant simplicity.",
@@ -190,6 +254,7 @@ export const portfolioTiles: Tile[] = [
     ],
   },
   {
+    slug: "modern-minimalistic",
     name: "Modern Minimalistic",
     category: "Residential · Mumbai",
     oneliner: "A sophisticated residence featuring refined interiors and thoughtful spatial planning.",
@@ -218,6 +283,7 @@ export const portfolioTiles: Tile[] = [
     ],
   },
   {
+    slug: "the-gallery",
     name: "The Gallery",
     category: "Residential · Mumbai",
     oneliner: "A contemporary family home designed for modern living and entertaining.",
@@ -240,6 +306,7 @@ export const portfolioTiles: Tile[] = [
     ],
   },
   {
+    slug: "calm-by-design",
     name: "Calm by Design",
     category: "Residential · Mumbai",
     oneliner: "A thoughtfully designed home emphasizing natural light and spatial harmony.",
@@ -264,6 +331,7 @@ export const portfolioTiles: Tile[] = [
     ],
   },
   {
+    slug: "a-vanilla-comfort",
     name: "A Vanilla Comfort",
     category: "Residential · Mumbai",
     oneliner: "A contemporary residence featuring clean lines and sophisticated interiors.",
@@ -299,6 +367,7 @@ export const portfolioTiles: Tile[] = [
     ],
   },
   {
+    slug: "minimalistic-aboard",
     name: "Minimalistic aboard",
     category: "Residential · Mumbai",
     oneliner: "A refined home showcasing elegant design principles and quality craftsmanship.",
@@ -321,6 +390,7 @@ export const portfolioTiles: Tile[] = [
     ],
   },
   {
+    slug: "timeless-warmth",
     name: "Timeless Warmth",
     category: "Residential · Goa",
     oneliner: "A coastal retreat designed to embrace the natural beauty of its surroundings.",
@@ -343,6 +413,7 @@ export const portfolioTiles: Tile[] = [
     ],
   },
   {
+    slug: "the-southern-fusion-residence",
     name: "The Southern Fusion Residence",
     category: "Residential · Mumbai",
     oneliner: "A warm and inviting family home designed for comfortable everyday living.",
@@ -368,6 +439,7 @@ export const portfolioTiles: Tile[] = [
     ],
   },
   {
+    slug: "timeless-neo-classical-elegance",
     name: "Timeless Neo-Classical Elegance",
     category: "Residential · Mumbai",
     oneliner: "An elegant home featuring sophisticated design and refined interiors.",
@@ -400,6 +472,7 @@ export const portfolioTiles: Tile[] = [
     ],
   },
   {
+    slug: "modern-chic-living",
     name: "Modern Chic Living",
     category: "Residential · Goa",
     oneliner: "Designed with a balance of elegance and personality for timeless and uplifting atmosphere.",
@@ -430,12 +503,13 @@ export const portfolioTiles: Tile[] = [
     ],
   },
   {
+    slug: "serene-coastal-elegance",
     name: "Serene Coastal Elegance",
     category: "Residential · Goa",
     oneliner: "A contemporary home designed for modern living with elegant simplicity.",
     img: udayImg,
     heroImage: udayHero,
-    brief: "Created to support graceful aging, this residence designed for Mr. Uday Kamat blends comfort, functionality, and sophistication. Every space is thoughtfully designed to foster ease, warmth, and lasting memories. Inspired by Goa’s Coastal character, this residence blends natural textures, soft neutral tones and relaxed elegance to create a light filled retreat.",
+    brief: "Created to support graceful aging, this residence designed for Mr. Uday Kamat blends comfort, functionality, and sophistication. Every space is thoughtfully designed to foster ease, warmth, and lasting memories. Inspired by Goa's Coastal character, this residence blends natural textures, soft neutral tones and relaxed elegance to create a light filled retreat.",
     approach: "We created a series of interconnected spaces that flow naturally from one to another. The design emphasizes natural light and incorporates smart home technology to enhance convenience and comfort.",
     specs: {
       typology: "Residential",
@@ -459,4 +533,134 @@ export const portfolioTiles: Tile[] = [
       udayG9,
     ],
   },
+  {
+    slug: "warm-contemporary-living",
+    name: "Warm Contemporary Living",
+    category: "Residential · Mumbai",
+    oneliner: "A contemporary residence featuring warm tones and sophisticated design.",
+    img: baligaImg,
+    heroImage: baligaHero,
+    brief: "Designed as a warm contemporary living space, this residence balances modern aesthetics with inviting comfort. The design features carefully curated spaces that emphasize natural light, rich textures, and thoughtful details to create a home that feels both sophisticated and welcoming.",
+    approach: "We focused on creating warm, inviting spaces through the use of rich materials and a carefully considered color palette. The layout emphasizes flow and connection between different areas of the home.",
+    specs: {
+      typology: "Residential",
+      location: "Mumbai, India",
+      yearCompleted: "2024",
+      principal: "Alpana S. Design",
+    },
+    galleryImages: [
+      baligaG1,
+      baligaG2,
+      baligaG3,
+      baligaG4,
+      baligaG5,
+      baligaG6,
+      baligaG7,
+      baligaG8,
+      baligaG9,
+      baligaHero,
+      baligaImg,
+      baligaG10,
+      baligaG11,
+      baligaG12,
+      baligaG13,
+      baligaG14,
+      baligaG15,
+      baligaG16,
+      baligaG17,
+      baligaG18,
+    ],
+  },
+  {
+    slug: "grand-entrance",
+    name: "Grand Entrance",
+    category: "Commercial · Mumbai",
+    oneliner: "A sophisticated lobby design creating a memorable first impression.",
+    img: lobbiesImg,
+    heroImage: lobbiesHero,
+    brief: "Designed to create a grand entrance experience, this lobby space combines elegance with functionality. The design features striking architectural elements, refined lighting, and carefully selected materials to establish a welcoming and impressive atmosphere for visitors and residents alike.",
+    approach: "We focused on creating a sense of arrival and grandeur through architectural details and lighting design. The space balances functionality with aesthetic appeal to create a memorable first impression.",
+    specs: {
+      typology: "Commercial",
+      location: "Mumbai, India",
+      yearCompleted: "2023",
+      principal: "Alpana S. Design",
+    },
+    galleryImages: [
+      lobbiesG1,
+      lobbiesG2,
+      lobbiesG3,
+      lobbiesG4,
+      lobbiesG5,
+      lobbiesG6,
+      lobbiesG7,
+      lobbiesHero,
+      lobbiesImg,
+      lobbiesG8,
+    ],
+  },
+  {
+    slug: "refined-first-impression",
+    name: "Refined First Impression",
+    category: "Commercial · Mumbai",
+    oneliner: "A modern office space designed for productivity and professional elegance.",
+    img: officeImg,
+    heroImage: officeHero,
+    brief: "Designed as a refined office environment, this space balances professional functionality with contemporary design. The layout emphasizes productivity while creating an atmosphere of sophistication and comfort. Thoughtful details and quality materials establish a polished professional identity.",
+    approach: "We created a functional yet elegant office environment with careful attention to workflow and spatial organization. The design incorporates modern elements while maintaining a professional and welcoming atmosphere.",
+    specs: {
+      typology: "Commercial",
+      location: "Mumbai, India",
+      yearCompleted: "2024",
+      principal: "Alpana S. Design",
+    },
+    galleryImages: [
+      officeG1,
+      officeG2,
+      officeG3,
+      officeG4,
+      officeG5,
+      officeG6,
+      officeG7,
+      officeHero,
+      officeImg,
+      officeG8,
+    ],
+  },
+  {
+    slug: "gentle-palate",
+    name: "Gentle Palate",
+    category: "Residential · Mumbai",
+    oneliner: "A serene home featuring soft tones and elegant design elements.",
+    img: sweetaImg,
+    heroImage: sweetaHero,
+    brief: "Designed with a gentle color palette and refined aesthetics, this residence creates a serene and calming atmosphere. The spaces are thoughtfully composed with soft tones, elegant furnishings, and subtle details that contribute to a sense of tranquility and sophistication.",
+    approach: "We focused on creating a gentle, calming environment through the use of soft colors and refined design elements. The spaces are designed to feel peaceful and inviting while maintaining elegance and functionality.",
+    specs: {
+      typology: "Residential",
+      location: "Mumbai, India",
+      yearCompleted: "2024",
+      principal: "Alpana S. Design",
+    },
+    galleryImages: [
+      sweetaG1,
+      sweetaG2,
+      sweetaG3,
+      sweetaG4,
+      sweetaG5,
+      sweetaG6,
+      sweetaG7,
+      sweetaG8,
+      sweetaG9,
+      sweetaHero,
+      sweetaImg,
+      sweetaG10,
+      sweetaG11,
+      sweetaG12,
+    ],
+  },
 ];
+
+export function getProjectBySlug(slug: string): Tile | undefined {
+  return portfolioTiles.find((t) => t.slug === slug);
+}

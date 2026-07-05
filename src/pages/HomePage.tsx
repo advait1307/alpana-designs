@@ -1,5 +1,5 @@
+import { useNavigate } from "react-router";
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { Hairline } from "@/components/ui/Hairline";
 import { Reveal } from "@/components/ui/Reveal";
 import { ProjectCard } from "@/components/home/ProjectCard";
 import { TextLink } from "@/components/home/TextLink";
@@ -7,24 +7,16 @@ import { FOUNDER } from "@/constants/brand";
 import { C } from "@/constants/colors";
 import { homeProjects } from "@/data/homeProjects";
 import { portfolioTiles } from "@/data/portfolioTiles";
-import type { Page, Tile } from "@/types";
+import { paths } from "@/routing/paths";
 import homepg from "@/images/HomePage1.jpeg";
 
-interface HomePageProps {
-  go: (p: Page) => void;
-  goToProject: (t: Tile) => void;
-}
-
-export function HomePage({ go, goToProject }: HomePageProps) {
-  const navigate = (p: Page) => {
-    go(p);
-    window.scrollTo(0, 0);
-  };
+export function HomePage() {
+  const navigate = useNavigate();
 
   const handleProjectClick = (projectName: string) => {
     const project = portfolioTiles.find((t) => t.name === projectName);
     if (project) {
-      goToProject(project);
+      navigate(paths.project(project.slug));
     }
   };
 
@@ -61,7 +53,7 @@ export function HomePage({ go, goToProject }: HomePageProps) {
             <Eyebrow>Architecture · Interior Design</Eyebrow>
             <h1
               style={{
-                fontFamily: "'Cormorant Garamond', serif",
+                fontFamily: "'Cormorant Garamond', cursive",
                 fontWeight: 300,
                 fontSize: "clamp(44px, 5.5vw, 72px)",
                 lineHeight: 1.08,
@@ -86,7 +78,7 @@ export function HomePage({ go, goToProject }: HomePageProps) {
               {/* Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. */}
             </p>
             <div style={{ marginTop: "40px" }}>
-              <TextLink onClick={() => navigate("work")}>View our work</TextLink>
+              <TextLink onClick={() => navigate(paths.work)}>View our work</TextLink>
             </div>
             <div
               style={{
@@ -118,7 +110,7 @@ export function HomePage({ go, goToProject }: HomePageProps) {
           </div>
           <Reveal delay={180}>
             <div style={{ textAlign: "center", marginTop: "56px" }}>
-              <TextLink onClick={() => navigate("work")}>See all projects</TextLink>
+              <TextLink onClick={() => navigate(paths.work)}>See all projects</TextLink>
             </div>
           </Reveal>
         </div>

@@ -1,17 +1,18 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router";
 import { ImageWithFallback } from "@/components/ui/ImageWithFallback";
 import { NavItem } from "@/components/ui/NavItem";
 import { C } from "@/constants/colors";
 import logoSrc from "@/images/logo1.png";
+import { paths } from "@/routing/paths";
 import type { Page } from "@/types";
-
 
 export interface HeaderProps {
   current: Page;
-  go: (p: Page) => void;
 }
 
-export function Header({ current, go }: HeaderProps) {
+export function Header({ current }: HeaderProps) {
+  const navigate = useNavigate();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -29,10 +30,10 @@ export function Header({ current, go }: HeaderProps) {
     };
   }, [open]);
 
-  const navigate = (p: Page) => {
-    go(p);
+  const goToPage = (p: Page) => {
+    const path = p === "home" ? paths.home : paths[p];
+    navigate(path);
     setOpen(false);
-    window.scrollTo(0, 0);
   };
 
   return (
@@ -50,7 +51,7 @@ export function Header({ current, go }: HeaderProps) {
           style={{ maxWidth: "1280px", padding: "0 32px", height: "72px" }}
         >
           <button
-            onClick={() => navigate("home")}
+            onClick={() => goToPage("home")}
             style={{ background: "none", border: "none", cursor: "pointer", padding: 0, lineHeight: 0 }}
             aria-label="Alpana S. Design — Home"
           >
@@ -73,7 +74,7 @@ export function Header({ current, go }: HeaderProps) {
                 key={p}
                 label={p.charAt(0).toUpperCase() + p.slice(1)}
                 active={current === p}
-                onClick={() => navigate(p)}
+                onClick={() => goToPage(p)}
               />
             ))}
           </div>
@@ -125,7 +126,7 @@ export function Header({ current, go }: HeaderProps) {
           {(["home", "work", "studio", "contact"] as Page[]).map((p) => (
             <button
               key={p}
-              onClick={() => navigate(p)}
+              onClick={() => goToPage(p)}
               style={{
                 fontFamily: "'Cormorant Garamond', serif",
                 fontWeight: 300,
@@ -146,5 +147,3 @@ export function Header({ current, go }: HeaderProps) {
     </>
   );
 }
-
-

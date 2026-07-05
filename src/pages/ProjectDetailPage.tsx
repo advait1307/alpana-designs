@@ -1,20 +1,20 @@
+import { useNavigate } from "react-router";
 import { useState } from "react";
 import { GalleryPhoto } from "@/components/project/GalleryPhoto";
 import { Lightbox } from "@/components/project/Lightbox";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Reveal } from "@/components/ui/Reveal";
-import { FOUNDER } from "@/constants/brand";
 import { C } from "@/constants/colors";
 import { portfolioTiles } from "@/data/portfolioTiles";
-import type { Page, Tile } from "@/types";
+import { paths } from "@/routing/paths";
+import type { Tile } from "@/types";
 
 interface ProjectDetailPageProps {
   project: Tile;
-  go: (p: Page) => void;
-  goToProject: (t: Tile) => void;
 }
 
-export function ProjectDetailPage({ project, go, goToProject }: ProjectDetailPageProps) {
+export function ProjectDetailPage({ project }: ProjectDetailPageProps) {
+  const navigate = useNavigate();
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
   const [videoPlaying, setVideoPlaying] = useState(false);
@@ -66,7 +66,7 @@ export function ProjectDetailPage({ project, go, goToProject }: ProjectDetailPag
         <div style={{ maxWidth: "1280px", margin: "0 auto" }}>
           <Reveal>
             <button
-              onClick={() => go("work")}
+              onClick={() => navigate(paths.work)}
               style={{
                 fontFamily: "'DM Sans', sans-serif",
                 fontSize: "11px",
@@ -535,7 +535,7 @@ export function ProjectDetailPage({ project, go, goToProject }: ProjectDetailPag
         }}
         onMouseEnter={() => setNextHov(true)}
         onMouseLeave={() => setNextHov(false)}
-        onClick={() => goToProject(nextProject)}
+        onClick={() => navigate(paths.project(nextProject.slug))}
       >
         <div
           style={{

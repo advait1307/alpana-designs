@@ -1,6 +1,7 @@
 export type Page = "home" | "studio" | "work" | "contact" | "project";
 
 export interface Tile {
+  slug: string;
   name: string;
   category: string;
   oneliner: string;

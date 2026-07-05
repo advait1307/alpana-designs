@@ -1,19 +1,18 @@
+import { useNavigate } from "react-router";
 import { ImageWithFallback } from "@/components/ui/ImageWithFallback";
 import { NavItem } from "@/components/ui/NavItem";
 import { STUDIO_SHORT } from "@/constants/brand";
 import { C } from "@/constants/colors";
 import logoSrc from "@/images/logo1.png";
+import { paths } from "@/routing/paths";
 import type { Page } from "@/types";
 
-interface FooterProps {
-  go: (p: Page) => void;
-}
+export function Footer() {
+  const navigate = useNavigate();
 
-
-export function Footer({ go }: FooterProps) {
-  const navigate = (p: Page) => {
-    go(p);
-    window.scrollTo(0, 0);
+  const goToPage = (p: Page) => {
+    const path = p === "home" ? paths.home : paths[p];
+    navigate(path);
   };
 
   return (
@@ -24,7 +23,7 @@ export function Footer({ go }: FooterProps) {
       >
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
           <button
-            onClick={() => navigate("home")}
+            onClick={() => goToPage("home")}
             style={{ background: "none", border: "none", cursor: "pointer", padding: 0, lineHeight: 0 }}
             aria-label="Alpana S. Design — Home"
           >
@@ -32,7 +31,6 @@ export function Footer({ go }: FooterProps) {
               style={{
                 display: "inline-flex",
                 alignItems: "center",
-                // padding: "4px 12px",
               }}
             >
               <ImageWithFallback
@@ -55,7 +53,7 @@ export function Footer({ go }: FooterProps) {
                 key={p}
                 label={p.charAt(0).toUpperCase() + p.slice(1)}
                 active={false}
-                onClick={() => navigate(p)}
+                onClick={() => goToPage(p)}
                 light
               />
             ))}
@@ -108,5 +106,3 @@ export function Footer({ go }: FooterProps) {
     </footer>
   );
 }
-
-

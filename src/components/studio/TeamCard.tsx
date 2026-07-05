@@ -52,6 +52,18 @@ export function TeamCard({
         >
           {member.role}
         </p>
+        <p
+          style={{
+            fontFamily: "'DM Sans', sans-serif",
+            fontWeight: 400,
+            fontSize: "13px",
+            color: C.oyster,
+            lineHeight: 1.7,
+            marginTop: "12px",
+          }}
+        >
+          {member.bio}
+        </p>
       </div>
     </div>
   );

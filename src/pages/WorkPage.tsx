@@ -1,15 +1,18 @@
+import { useNavigate } from "react-router";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Reveal } from "@/components/ui/Reveal";
 import { FlipCard } from "@/components/work/FlipCard";
 import { C } from "@/constants/colors";
 import { portfolioTiles } from "@/data/portfolioTiles";
+import { paths } from "@/routing/paths";
 import type { Tile } from "@/types";
 
-interface WorkPageProps {
-  onProjectSelect: (t: Tile) => void;
-}
+export function WorkPage() {
+  const navigate = useNavigate();
 
-export function WorkPage({ onProjectSelect }: WorkPageProps) {
+  const onProjectSelect = (tile: Tile) => {
+    navigate(paths.project(tile.slug));
+  };
   const col1 = portfolioTiles.filter((_, i) => i % 3 === 0);
   const col2 = portfolioTiles.filter((_, i) => i % 3 === 1);
   const col3 = portfolioTiles.filter((_, i) => i % 3 === 2);

@@ -1,7 +1,7 @@
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Reveal } from "@/components/ui/Reveal";
 import { TeamCard } from "@/components/studio/TeamCard";
-import { FOUNDER } from "@/constants/brand";
+import { FOUNDER, TEAM_MEMBERS } from "@/constants/brand";
 import { C } from "@/constants/colors";
 
 export function StudioPage() {
@@ -62,10 +62,10 @@ export function StudioPage() {
                     marginTop: "28px",
                   }}
                 >
-                  Alpana S Design is a design engine where 26 years of experience meets contemporary thinking.
-With a foundation in  architectural and shaped by a deep understanding of interiors, we believe every space should be planned with purpose. Our approach balances functionality, flow, and detail to create environments that feel intuitive, refined, and deeply personal.
-We have a dynamic team of young designers who bring fresh perspectives and the latest design technologies to our projects .
-Every space is designed with intent, allowing refined aesthetics to emerge naturally from a well-resolved design.
+                Alpana S Design is a design studio where over 26 years of experience meets contemporary thinking. Built on a strong foundation in architecture and shaped by a deep understanding of interior design, we believe that every space should be thoughtfully planned with purpose and precision.
+                Our design philosophy is rooted in creating environments that balance functionality, spatial flow, and meticulous attention to detail. Every project is approached with the belief that exceptional design is not merely about aesthetics—it is about crafting spaces that are intuitive to use, refined in character, and deeply personal to those who inhabit them.
+                Complementing this experience is a dynamic team of young designers who bring fresh perspectives, creative energy, and the latest design technologies to every project. By combining proven expertise with innovative thinking, we deliver spaces that are timeless, practical, and relevant to modern lifestyles.
+                At Alpana S Design, every design decision is intentional, allowing elegance and refined aesthetics to emerge naturally from a well-resolved and thoughtfully executed design.
                 </p>
               </Reveal>
               <Reveal delay={190}>
@@ -202,23 +202,7 @@ Every space is designed with intent, allowing refined aesthetics to emerge natur
             </p>
           </Reveal>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            {[
-              {
-                name: "Alpana Sukerkar",
-                role: "Founder & Principal Designer",
-                img: "https://images.unsplash.com/photo-1619799090425-0efe92bd62a7?w=500&h=500&fit=crop&auto=format",
-              },
-              {
-                name: "Anagha Mistry",
-                role: "Lead Designer",
-                img: "https://images.unsplash.com/photo-1574281570877-bd815ebb50a4?w=500&h=500&fit=crop&auto=format",
-              },
-              {
-                name: "Shanti Kurupaty",
-                role: "Project Manager",
-                img: "https://images.unsplash.com/photo-1600896997793-b8ed3459a17f?w=500&h=500&fit=crop&auto=format",
-              },
-            ].map((member, i) => (
+            {TEAM_MEMBERS.slice(0, 3).map((member, i) => (
               <Reveal key={i} delay={i * 80}>
                 <TeamCard member={member} />
               </Reveal>
@@ -227,18 +211,7 @@ Every space is designed with intent, allowing refined aesthetics to emerge natur
           </div>
           {/* Second row: only 2 members, centered */}
           <div className="flex flex-col md:flex-row justify-center gap-10 mt-10">
-            {[
-              {
-                name: "Saroj Kamble",
-                role: "Senior Designer",
-                img: "https://images.unsplash.com/photo-1600896997793-b8ed3459a17f?w=500&h=500&fit=crop&auto=format",
-              },
-              {
-                name: "Rutuja Ghoge",
-                role: "Junior Designer",
-                img: "https://images.unsplash.com/photo-1600896997793-b8ed3459a17f?w=500&h=500&fit=crop&auto=format",
-              },
-            ].map((member, i) => (
+            {TEAM_MEMBERS.slice(3).map((member, i) => (
               <div key={i} className="w-full md:w-[calc((100%-2*2.5rem)/3)]">
                 <Reveal delay={i * 80}>
                   <TeamCard member={member} />
