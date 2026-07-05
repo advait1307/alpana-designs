@@ -326,97 +326,99 @@ export function ProjectDetailPage({ project }: ProjectDetailPageProps) {
       </section>
 
       {/* ── Section 5: Video Walkthrough ── */}
-      <section style={{ background: C.merino, padding: "96px 32px" }}>
-        <div style={{ maxWidth: "1280px", margin: "0 auto" }}>
-          <Reveal>
-            <Eyebrow>Walkthrough</Eyebrow>
-          </Reveal>
-          <Reveal delay={80}>
-            <h2
-              style={{
-                fontFamily: "'Cormorant Garamond', serif",
-                fontWeight: 300,
-                fontSize: "clamp(28px, 3.5vw, 40px)",
-                color: C.cedar,
-                letterSpacing: "0.03em",
-                marginTop: "12px",
-                marginBottom: "32px",
-              }}
-            >
-              Experience the Space.
-            </h2>
-          </Reveal>
-          <Reveal delay={120}>
-            <div style={{ position: "relative", width: "100%", aspectRatio: isInstagramVideo ? "9/16" : "16/9", maxWidth: isInstagramVideo ? "400px" : "100%", margin: isInstagramVideo ? "0 auto" : "0" }}>
-              {isInstagramVideo && project.videoUrl ? (
-                <iframe
-                  style={{ width: "100%", height: "100%", border: "none", display: "block" }}
-                  src={project.videoUrl}
-                  title="Project Walkthrough"
-                  allow="autoplay; fullscreen"
-                  scrolling="no"
-                />
-              ) : videoPlaying && project.videoUrl ? (
-                <iframe
-                  style={{ width: "100%", height: "100%", border: "none", display: "block" }}
-                  src={`${project.videoUrl}?autoplay=1`}
-                  title="Project Walkthrough"
-                  allow="autoplay; fullscreen"
-                />
-              ) : project.videoUrl ? (
-                <div
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    background: C.rifleGreen,
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    cursor: "pointer",
-                    gap: "24px",
-                  }}
-                  onClick={() => project.videoUrl && setVideoPlaying(true)}
-                >
+      {project.videoUrl && (
+        <section style={{ background: C.merino, padding: "96px 32px" }}>
+          <div style={{ maxWidth: "1280px", margin: "0 auto" }}>
+            <Reveal>
+              <Eyebrow>Walkthrough</Eyebrow>
+            </Reveal>
+            <Reveal delay={80}>
+              <h2
+                style={{
+                  fontFamily: "'Cormorant Garamond', serif",
+                  fontWeight: 300,
+                  fontSize: "clamp(28px, 3.5vw, 40px)",
+                  color: C.cedar,
+                  letterSpacing: "0.03em",
+                  marginTop: "12px",
+                  marginBottom: "32px",
+                }}
+              >
+                Experience the Space.
+              </h2>
+            </Reveal>
+            <Reveal delay={120}>
+              <div style={{ position: "relative", width: "100%", aspectRatio: isInstagramVideo ? "9/16" : "16/9", maxWidth: isInstagramVideo ? "400px" : "100%", margin: isInstagramVideo ? "0 auto" : "0" }}>
+                {isInstagramVideo && project.videoUrl ? (
+                  <iframe
+                    style={{ width: "100%", height: "100%", border: "none", display: "block" }}
+                    src={project.videoUrl}
+                    title="Project Walkthrough"
+                    allow="autoplay; fullscreen"
+                    scrolling="no"
+                  />
+                ) : videoPlaying && project.videoUrl ? (
+                  <iframe
+                    style={{ width: "100%", height: "100%", border: "none", display: "block" }}
+                    src={`${project.videoUrl}?autoplay=1`}
+                    title="Project Walkthrough"
+                    allow="autoplay; fullscreen"
+                  />
+                ) : project.videoUrl ? (
                   <div
                     style={{
-                      width: "56px",
-                      height: "56px",
-                      borderRadius: "50%",
-                      background: C.oyster,
+                      width: "100%",
+                      height: "100%",
+                      background: C.rifleGreen,
                       display: "flex",
+                      flexDirection: "column",
                       alignItems: "center",
                       justifyContent: "center",
+                      cursor: "pointer",
+                      gap: "24px",
                     }}
+                    onClick={() => project.videoUrl && setVideoPlaying(true)}
                   >
                     <div
                       style={{
-                        width: 0,
-                        height: 0,
-                        borderTop: "10px solid transparent",
-                        borderBottom: "10px solid transparent",
-                        borderLeft: "16px solid #FFFFFF",
-                        marginLeft: "4px",
-                      }}
-                    />
-                  </div>
-                  <p
-                    style={{
-                      fontFamily: "'DM Sans', sans-serif",
-                      fontSize: "12px",
-                      letterSpacing: "0.12em",
-                      textTransform: "uppercase",
-                      color: C.oyster,
+                        width: "56px",
+                        height: "56px",
+                        borderRadius: "50%",
+                        background: C.oyster,
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
                     }}
-                  >
-                    Project Walkthrough Video · {project.videoDuration || "--:--"}
-                  </p>
-                </div>
-              ) : null}
-            </div>
-          </Reveal>
-        </div>
-      </section>
+                    >
+                      <div
+                        style={{
+                          width: 0,
+                          height: 0,
+                          borderTop: "10px solid transparent",
+                          borderBottom: "10px solid transparent",
+                          borderLeft: "16px solid #FFFFFF",
+                          marginLeft: "4px",
+                        }}
+                      />
+                    </div>
+                    <p
+                      style={{
+                        fontFamily: "'DM Sans', sans-serif",
+                        fontSize: "12px",
+                        letterSpacing: "0.12em",
+                        textTransform: "uppercase",
+                        color: C.oyster,
+                      }}
+                    >
+                      Project Walkthrough Video · {project.videoDuration || "--:--"}
+                    </p>
+                  </div>
+                ) : null}
+              </div>
+            </Reveal>
+          </div>
+        </section>
+      )}
 
       {/* ── Section 6: Owner Testimonial ── */}
       <section style={{ background: C.kangaroo, padding: "120px 32px" }}>

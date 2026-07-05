@@ -215,8 +215,8 @@ export const portfolioTiles: Tile[] = [
       amonkarG4,
       amonkarImg
     ],
-    videoUrl: "https://www.instagram.com/reel/CuWjgWzl2tD/embed",
-    videoDuration: "0:45",
+    // videoUrl: "https://www.instagram.com/reel/CuWjgWzl2tD/embed",
+    // videoDuration: "0:45",
   },
   {
     slug: "earthy-elegance",
