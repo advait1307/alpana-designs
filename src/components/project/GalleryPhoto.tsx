@@ -25,6 +25,8 @@ export function GalleryPhoto({
       <img
         src={imageUrl}
         alt={`Project photo ${globalIndex + 1}`}
+        loading="lazy"
+        decoding="async"
         style={{
           width: "100%",
           display: "block",

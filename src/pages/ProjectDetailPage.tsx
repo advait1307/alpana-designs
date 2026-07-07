@@ -178,6 +178,9 @@ export function ProjectDetailPage({ project }: ProjectDetailPageProps) {
             <img
               src={project.heroImage || project.img}
               alt={project.name}
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
               style={{
                 width: "100%",
                 aspectRatio: "16/9",

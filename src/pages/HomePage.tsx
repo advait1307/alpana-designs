@@ -53,8 +53,10 @@ export function HomePage() {
             <Eyebrow>Architecture · Interior Design</Eyebrow>
             <h1
               style={{
-                fontFamily: "'Cormorant Garamond', cursive",
-                fontWeight: 300,
+                fontFamily: "'Autography', cursive",
+                fontWeight: 400,
+                // fontFamily: "'Cormorant Garamond', serif",
+                // fontWeight: 300,
                 fontSize: "clamp(44px, 5.5vw, 72px)",
                 lineHeight: 1.08,
                 letterSpacing: "0.02em",
