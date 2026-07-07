@@ -15,7 +15,14 @@ export function StudioPage() {
           style={{ maxWidth: "1280px" }}
         >
           <div
-            style={{ width: "100%", maxWidth: "900px", margin: "0 auto", overflow: "hidden", background: C.kangaroo }}
+            style={{ 
+              width: "100%", 
+              maxWidth: "900px", 
+              margin: "0 auto", 
+              overflow: "hidden", 
+              background: C.kangaroo,
+              boxShadow: "0 4px 24px rgba(67, 68, 43, 0.12)"
+            }}
           >
             <img
               src={teamIMG}
@@ -27,7 +34,7 @@ export function StudioPage() {
             style={{
               display: "flex",
               alignItems: "center",
-              padding: "60px 56px 80px 56px",
+              padding: "72px 56px 96px 56px",
             }}
           >
             <div>
@@ -47,7 +54,7 @@ export function StudioPage() {
                     whiteSpace: "pre-line",
                   }}
                 >
-                  {"Designing with\nPurpose."}
+                  {"Designing with Purpose."}
                 </h1>
               </Reveal>
               <Reveal delay={140}>
@@ -56,7 +63,7 @@ export function StudioPage() {
                     fontFamily: "'DM Sans', sans-serif",
                     fontSize: "15px",
                     color: C.oyster,
-                    maxWidth: "700px",
+                    maxWidth: "1500px",
                     lineHeight: 1.85,
                     marginTop: "28px",
                   }}
@@ -73,7 +80,8 @@ export function StudioPage() {
                     width: "60px",
                     height: "1px",
                     background: C.oyster,
-                    margin: "36px 0 18px",
+                    margin: "40px 0 20px",
+                    opacity: 0.6,
                   }}
                 />
                 <p
@@ -95,11 +103,15 @@ export function StudioPage() {
       </section>
 
       {/* ── Values ── */}
-      <section style={{ background: C.kangaroo, padding: "120px 0" }}>
+      <section style={{ background: C.kangaroo, padding: "140px 0" }}>
         <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 32px" }}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <Reveal>
-              <div style={{ overflow: "hidden", background: C.oyster }}>
+              <div style={{ 
+                overflow: "hidden", 
+                background: C.oyster,
+                boxShadow: "0 8px 32px rgba(67, 68, 43, 0.15)"
+              }}>
                 <img
                   src="https://images.unsplash.com/photo-1521194263619-39ecc5b55c61?w=500&h=780&fit=crop&auto=format"
                   alt="Geometric light and shadow on concrete — a material detail"
@@ -127,9 +139,18 @@ export function StudioPage() {
                 <Reveal key={i} delay={i * 100}>
                   <div
                     style={{
-                      paddingBottom: "32px",
-                      marginBottom: "32px",
+                      paddingBottom: "36px",
+                      marginBottom: "36px",
                       borderBottom: i < 2 ? `1px solid ${C.oyster}` : "none",
+                      transition: "transform 0.3s ease, opacity 0.3s ease",
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.transform = "translateX(8px)";
+                      e.currentTarget.style.opacity = "0.8";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = "translateX(0)";
+                      e.currentTarget.style.opacity = "1";
                     }}
                   >
                     <h3
@@ -139,7 +160,7 @@ export function StudioPage() {
                         fontSize: "30px",
                         color: C.cedar,
                         letterSpacing: "0.02em",
-                        marginBottom: "12px",
+                        marginBottom: "14px",
                       }}
                     >
                       {v.name}
@@ -163,7 +184,7 @@ export function StudioPage() {
       </section>
 
       {/* ── Team ── */}
-      <section style={{ background: C.merino, padding: "120px 0" }}>
+      <section style={{ background: C.merino, padding: "140px 0" }}>
         <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 32px" }}>
           <Reveal>
             <Eyebrow>The People</Eyebrow>
@@ -193,29 +214,18 @@ export function StudioPage() {
                 maxWidth: "520px",
                 lineHeight: 1.8,
                 marginTop: "18px",
-                marginBottom: "56px",
+                marginBottom: "64px",
               }}
             >
               Five people, one way of working: slowly, carefully, and with complete conviction
               in the brief.
             </p>
           </Reveal>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            {TEAM_MEMBERS.slice(0, 3).map((member, i) => (
-              <Reveal key={i} delay={i * 80}>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            {TEAM_MEMBERS.map((member, i) => (
+              <Reveal key={i} delay={i * 60}>
                 <TeamCard member={member} />
               </Reveal>
-            ))}
-            <div className="hidden md:block"></div>
-          </div>
-          {/* Second row: only 2 members, centered */}
-          <div className="flex flex-col md:flex-row justify-center gap-10 mt-10">
-            {TEAM_MEMBERS.slice(3).map((member, i) => (
-              <div key={i} className="w-full md:w-[calc((100%-2*2.5rem)/3)]">
-                <Reveal delay={i * 80}>
-                  <TeamCard member={member} />
-                </Reveal>
-              </div>
             ))}
           </div>
         </div>

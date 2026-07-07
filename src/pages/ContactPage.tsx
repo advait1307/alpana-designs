@@ -13,6 +13,7 @@ export function ContactPage() {
 
   const handleFocus = (e: FocusEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     e.currentTarget.style.borderBottom = `2px solid ${C.cedar}`;
+    e.currentTarget.style.transition = "border-bottom 0.3s ease";
   };
   const handleBlur = (e: FocusEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     e.currentTarget.style.borderBottom = `1px solid ${C.oyster}`;
@@ -36,7 +37,7 @@ export function ContactPage() {
   return (
     <div style={{ paddingTop: "72px", background: C.merino }}>
       {/* ── Header ── */}
-      <section style={{ padding: "80px 32px 0" }}>
+      <section style={{ padding: "100px 32px 0" }}>
         <div style={{ maxWidth: "1280px", margin: "0 auto" }}>
           <Reveal>
             <Eyebrow>Get in Touch</Eyebrow>
@@ -50,7 +51,7 @@ export function ContactPage() {
                 color: C.cedar,
                 letterSpacing: "0.03em",
                 lineHeight: 1.08,
-                marginTop: "14px",
+                marginTop: "18px",
                 whiteSpace: "pre-line",
               }}
             >
@@ -63,9 +64,9 @@ export function ContactPage() {
                 fontFamily: "'DM Sans', sans-serif",
                 fontSize: "15px",
                 color: C.oyster,
-                maxWidth: "480px",
+                maxWidth: "520px",
                 lineHeight: 1.85,
-                marginTop: "24px",
+                marginTop: "28px",
               }}
             >
               We take on a limited number of projects each year. If you're looking for a studio
@@ -73,7 +74,7 @@ export function ContactPage() {
             </p>
           </Reveal>
           <Reveal delay={180}>
-            <div style={{ marginTop: "52px" }}>
+            <div style={{ marginTop: "64px" }}>
               <Hairline />
             </div>
           </Reveal>
@@ -81,12 +82,12 @@ export function ContactPage() {
       </section>
 
       {/* ── Contact Layout ── */}
-      <section style={{ padding: "80px 32px 120px" }}>
+      <section style={{ padding: "100px 32px 140px" }}>
         <div style={{ maxWidth: "1280px", margin: "0 auto" }}>
           <div className="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-16 md:gap-24">
             {/* Left: Details */}
             <Reveal>
-              <div style={{ display: "flex", flexDirection: "column", gap: "36px" }}>
+              <div style={{ display: "flex", flexDirection: "column", gap: "40px" }}>
                 {[
                   {
                     label: "Studio Address",
@@ -109,12 +110,12 @@ export function ContactPage() {
                     <p
                       style={{
                         fontFamily: "'DM Sans', sans-serif",
-                        fontWeight: 400,
-                        fontSize: "9px",
-                        letterSpacing: "0.16em",
+                        fontWeight: 500,
+                        fontSize: "10px",
+                        letterSpacing: "0.18em",
                         textTransform: "uppercase",
                         color: C.oyster,
-                        marginBottom: "10px",
+                        marginBottom: "12px",
                       }}
                     >
                       {item.label}
@@ -124,12 +125,23 @@ export function ContactPage() {
                         fontFamily: item.serif
                           ? "'Cormorant Garamond', serif"
                           : "'DM Sans', sans-serif",
-                        fontSize: item.serif ? "22px" : "15px",
+                        fontSize: item.serif ? "23px" : "16px",
                         color: item.accent ? C.oyster : item.muted ? C.oyster : C.cedar,
-                        lineHeight: 1.65,
+                        lineHeight: 1.6,
                         whiteSpace: "pre-line",
                         textDecoration: item.accent ? "underline" : "none",
                         cursor: item.accent ? "pointer" : "default",
+                        transition: item.accent ? "color 0.2s ease, text-decoration 0.2s ease" : "none",
+                      }}
+                      onMouseEnter={(e) => {
+                        if (item.accent) {
+                          e.currentTarget.style.color = C.cedar;
+                        }
+                      }}
+                      onMouseLeave={(e) => {
+                        if (item.accent) {
+                          e.currentTarget.style.color = C.oyster;
+                        }
                       }}
                     >
                       {item.value}
@@ -137,8 +149,8 @@ export function ContactPage() {
                   </div>
                 ))}
 
-                <div>
-                  <a href="tel:+919324138179" style={{ textDecoration: 'none' }}>
+                <div style={{ paddingTop: "12px" }}>
+                  <a href="tel:+919324138179" style={{ textDecoration: 'none', display: 'inline-block' }}>
                     <SolidBtn>Contact Us</SolidBtn>
                   </a>
                 </div>
@@ -154,15 +166,17 @@ export function ContactPage() {
                     display: "flex",
                     flexDirection: "column",
                     justifyContent: "center",
+                    alignItems: "flex-start",
                   }}
                 >
                   <p
                     style={{
                       fontFamily: "'Cormorant Garamond', serif",
                       fontWeight: 300,
-                      fontSize: "40px",
+                      fontSize: "42px",
                       color: C.cedar,
                       letterSpacing: "0.03em",
+                      lineHeight: 1.1,
                     }}
                   >
                     Thank you.
@@ -170,11 +184,11 @@ export function ContactPage() {
                   <p
                     style={{
                       fontFamily: "'DM Sans', sans-serif",
-                      fontSize: "14px",
+                      fontSize: "15px",
                       color: C.oyster,
-                      marginTop: "16px",
+                      marginTop: "20px",
                       lineHeight: 1.8,
-                      maxWidth: "360px",
+                      maxWidth: "400px",
                     }}
                   >
                     Your inquiry has been received. We'll be in touch within 48 hours.
@@ -183,7 +197,7 @@ export function ContactPage() {
               ) : (
                 <form
                   onSubmit={handleSubmit}
-                  style={{ display: "flex", flexDirection: "column", gap: "32px" }}
+                  style={{ display: "flex", flexDirection: "column", gap: "36px" }}
                 >
                   <FormField label="Full Name">
                     <input
@@ -254,9 +268,91 @@ export function ContactPage() {
         </div>
       </section>
 
-      {/* ── Map ── */}
+      {/* ── Instagram ── */}
       <Hairline />
-      <div style={{ height: "400px", overflow: "hidden", position: "relative" }}>
+      <section style={{ padding: "100px 32px 140px" }}>
+        <div style={{ maxWidth: "1280px", margin: "0 auto" }}>
+          <Reveal>
+            <div style={{ textAlign: "center", marginBottom: "56px" }}>
+              <Eyebrow>Follow Our Work</Eyebrow>
+              <h2
+                style={{
+                  fontFamily: "'Cormorant Garamond', serif",
+                  fontWeight: 300,
+                  fontSize: "clamp(32px, 4vw, 48px)",
+                  color: C.cedar,
+                  letterSpacing: "0.03em",
+                  lineHeight: 1.1,
+                  marginTop: "18px",
+                }}
+              >
+                On Instagram
+              </h2>
+            </div>
+          </Reveal>
+          <Reveal delay={80}>
+            <div
+              style={{
+                maxWidth: "640px",
+                margin: "0 auto",
+                borderRadius: "16px",
+                overflow: "hidden",
+                boxShadow: "0 8px 32px rgba(0, 0, 0, 0.1), 0 2px 8px rgba(0, 0, 0, 0.06)",
+                transition: "transform 0.3s ease, box-shadow 0.3s ease",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = "translateY(-4px)";
+                e.currentTarget.style.boxShadow = "0 12px 40px rgba(0, 0, 0, 0.12), 0 4px 12px rgba(0, 0, 0, 0.08)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = "translateY(0)";
+                e.currentTarget.style.boxShadow = "0 8px 32px rgba(0, 0, 0, 0.1), 0 2px 8px rgba(0, 0, 0, 0.06)";
+              }}
+            >
+              <iframe
+                title="Instagram — Alpana Sukerkar Interiors"
+                src="https://www.instagram.com/alpana_sukerkar_interiors/embed"
+                style={{
+                  width: "100%",
+                  height: "400px",
+                  border: "none",
+                  display: "block",
+                }}
+                loading="lazy"
+                scrolling="no"
+              />
+            </div>
+          </Reveal>
+          <Reveal delay={140}>
+            <div style={{ textAlign: "center", marginTop: "48px" }}>
+              <a
+                href="https://www.instagram.com/alpana_sukerkar_interiors?utm_source=qr&igsh=OHkxZ2dpZXExOWFm"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  fontFamily: "'DM Sans', sans-serif",
+                  fontSize: "15px",
+                  color: C.oyster,
+                  textDecoration: "underline",
+                  letterSpacing: "0.02em",
+                  transition: "color 0.2s ease, text-decoration 0.2s ease",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.color = C.cedar;
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.color = C.oyster;
+                }}
+              >
+                @alpana_sukerkar_interiors
+              </a>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+            {/* ── Map ── */}
+      <Hairline />
+      <div style={{ height: "450px", overflow: "hidden", position: "relative" }}>
         <a
           href="https://maps.app.goo.gl/xMrdYrmdAemMn7on6"
           target="_blank"
@@ -271,11 +367,18 @@ export function ContactPage() {
             width: "100%",
             height: "100%",
             border: "none",
-            filter: "grayscale(1) sepia(0.15) opacity(0.72)",
+            filter: "grayscale(1) sepia(0.15) opacity(0.75)",
             display: "block",
+            transition: "filter 0.3s ease",
           }}
           loading="lazy"
           allowFullScreen
+          onMouseEnter={(e) => {
+            e.currentTarget.style.filter = "grayscale(0.5) sepia(0.1) opacity(0.85)";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.filter = "grayscale(1) sepia(0.15) opacity(0.75)";
+          }}
         />
       </div>
     </div>

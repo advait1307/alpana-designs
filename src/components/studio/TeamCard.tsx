@@ -21,6 +21,7 @@ export function TeamCard({
             width: "100%",
             aspectRatio: "1/1",
             objectFit: "cover",
+            objectPosition: "center 18%",
             display: "block",
             filter: hov ? "grayscale(0%)" : "grayscale(100%)",
             transition: "filter 0.4s ease",
