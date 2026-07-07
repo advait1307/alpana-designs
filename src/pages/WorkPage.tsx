@@ -94,7 +94,7 @@ export function WorkPage() {
       </section>
 
       {/* ── Testimonials ── */}
-      {testimonials.length > 0 && (
+      {/* {testimonials.length > 0 && (
         <section style={{ padding: "0 32px 120px", background: C.kangaroo }}>
           <div style={{ maxWidth: "1280px", margin: "0 auto" }}>
             <Reveal>
@@ -129,7 +129,7 @@ export function WorkPage() {
             </div>
           </div>
         </section>
-      )}
+      )} */}
     </div>
   );
 }

@@ -72,6 +72,13 @@ import nileshG14 from "@/images/NILESH/NileshChill.jpeg";
 import satyajeetImg from "@/images/SATYAJEET/SatyajeetBed.jpg";
 import satyajeetHero from "@/images/SATYAJEET/SatyajeetHero.jpg";
 import satyajeetG1 from "@/images/SATYAJEET/SatyajeetHall.jpg";
+import satyajeetG2 from "@/images/SATYAJEET/SatyajeetBooks.jpg";
+import satyajeetG3 from "@/images/SATYAJEET/SatyajeetChair.jpg";
+import satyajeetG4 from "@/images/SATYAJEET/SatyajeetClock.jpg";
+import satyajeetG5 from "@/images/SATYAJEET/SatyajeetCupboard.jpg";
+import satyajeetG6 from "@/images/SATYAJEET/SatyajeetLamp.jpg";
+import satyajeetG7 from "@/images/SATYAJEET/SatyajeetSide.jpg";
+import satyajeetG8 from "@/images/SATYAJEET/SatyajeetView.jpg"; 
 
 // Sky View Goa
 import skyviewImg from "@/images/SKYVIEW/SkyViewDining.jpeg";
@@ -215,8 +222,12 @@ export const portfolioTiles: Tile[] = [
       amonkarG4,
       amonkarImg
     ],
-    // videoUrl: "https://www.instagram.com/reel/CuWjgWzl2tD/embed",
-    // videoDuration: "0:45",
+    testimonial: {
+      text: "",
+      author: "Mr and Mrs Amonkar",
+      role: "Homeowners",
+      project: "The Loft- A Industrial retreat",
+    },
   },
   {
     slug: "earthy-elegance",
@@ -291,6 +302,12 @@ export const portfolioTiles: Tile[] = [
       bhagwatImg,
       bhagwatG7,
     ],
+    testimonial: {
+      text: "",
+      author: "Mr and Mrs Bhagwat",
+      role: "Homeowners",
+      project: "Modern Minimalistic",
+    },
   },
   {
     slug: "the-gallery",
@@ -345,6 +362,12 @@ export const portfolioTiles: Tile[] = [
       krishnadasImg,
       krishnadasG3,
     ],
+    testimonial: {
+      text: "",
+      author: "Mr and Mrs Krishnadas",
+      role: "Homeowners",
+      project: "Calm by Design",
+    },
   },
   {
     slug: "a-vanilla-comfort",
@@ -411,7 +434,22 @@ export const portfolioTiles: Tile[] = [
       satyajeetG1,
       satyajeetHero,
       satyajeetImg,
+      satyajeetG2,
+      satyajeetG3,
+      // satyajeetG4,
+      satyajeetG5,
+      satyajeetG6,
+      satyajeetG7,
+      satyajeetG8,
+      satyajeetG4,
+      satyajeetG1
     ],
+    testimonial: {
+      text: "",
+      author: "Mr and Mrs Kelkar",
+      role: "Homeowners",
+      project: "Minimalistic aboard",
+    },
   },
   {
     slug: "timeless-warmth",
@@ -463,6 +501,12 @@ export const portfolioTiles: Tile[] = [
     ],
     videoUrl: "https://www.instagram.com/reel/CrIkKsRLifJ/embed",
     videoDuration: "1:05",
+    testimonial: {
+      text: "",
+      author: "Mr and Mrs Sundar",
+      role: "Homeowners",
+      project: "The Southern Fusion Residence",
+    },
   },
   {
     slug: "timeless-neo-classical-elegance",
@@ -502,8 +546,6 @@ export const portfolioTiles: Tile[] = [
       role: "Homeowner",
       project: "Timeless Neo-Classical Elegance",
     },
-    // videoUrl: "https://www.instagram.com/reel/CuWjgWzl2tD/embed",
-    // videoDuration: "0:48",
   },
   {
     slug: "modern-chic-living",
@@ -568,6 +610,12 @@ export const portfolioTiles: Tile[] = [
     ],
     videoUrl: "https://www.instagram.com/reel/CoUICJ8O2qf/embed",
     videoDuration: "0:58",
+    testimonial: {
+      text: "",
+      author: "Mr and Mrs Kamat",
+      role: "Homeowners",
+      project: "Serene Coastal Elegance",
+    },
   },
   {
     slug: "warm-contemporary-living",
@@ -612,6 +660,39 @@ export const portfolioTiles: Tile[] = [
       role: "Homeowner",
       project: "Warm Contemporary Living",
     },
+  },
+  {
+    slug: "gentle-palate",
+    name: "Gentle Palate",
+    category: "Residential · Mumbai",
+    oneliner: "A serene home featuring soft tones and elegant design elements.",
+    img: sweetaImg,
+    heroImage: sweetaHero,
+    brief: "Designed with a gentle color palette and refined aesthetics, this residence creates a serene and calming atmosphere. The spaces are thoughtfully composed with soft tones, elegant furnishings, and subtle details that contribute to a sense of tranquility and sophistication.",
+    approach: "We focused on creating a gentle, calming environment through the use of soft colors and refined design elements. The spaces are designed to feel peaceful and inviting while maintaining elegance and functionality.",
+    specs: {
+      typology: "Residential",
+      location: "Mumbai, India",
+      yearCompleted: "2025",
+      principal: "Alpana S. Design",
+    },
+    galleryImages: [
+      sweetaG1,
+      sweetaG2,
+      sweetaG3,
+      sweetaG4,
+      sweetaG5,
+      sweetaG6,
+      sweetaG7,
+      sweetaG8,
+      sweetaG9,
+      sweetaHero,
+      sweetaImg,
+      sweetaG10,
+      sweetaG11,
+      sweetaG12,
+    ],
+    
   },
   {
     slug: "grand-entrance",
@@ -667,38 +748,6 @@ export const portfolioTiles: Tile[] = [
       officeHero,
       officeImg,
       officeG8,
-    ],
-  },
-  {
-    slug: "gentle-palate",
-    name: "Gentle Palate",
-    category: "Residential · Mumbai",
-    oneliner: "A serene home featuring soft tones and elegant design elements.",
-    img: sweetaImg,
-    heroImage: sweetaHero,
-    brief: "Designed with a gentle color palette and refined aesthetics, this residence creates a serene and calming atmosphere. The spaces are thoughtfully composed with soft tones, elegant furnishings, and subtle details that contribute to a sense of tranquility and sophistication.",
-    approach: "We focused on creating a gentle, calming environment through the use of soft colors and refined design elements. The spaces are designed to feel peaceful and inviting while maintaining elegance and functionality.",
-    specs: {
-      typology: "Residential",
-      location: "Mumbai, India",
-      yearCompleted: "2025",
-      principal: "Alpana S. Design",
-    },
-    galleryImages: [
-      sweetaG1,
-      sweetaG2,
-      sweetaG3,
-      sweetaG4,
-      sweetaG5,
-      sweetaG6,
-      sweetaG7,
-      sweetaG8,
-      sweetaG9,
-      sweetaHero,
-      sweetaImg,
-      sweetaG10,
-      sweetaG11,
-      sweetaG12,
     ],
   },
 ];

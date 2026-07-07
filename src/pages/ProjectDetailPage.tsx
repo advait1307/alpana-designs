@@ -508,7 +508,7 @@ export function ProjectDetailPage({ project }: ProjectDetailPageProps) {
       <div style={{ height: "1px", background: C.oyster }} />
       <section
         style={{
-          background: C.rifleGreen,
+          background: C.cedar,
           padding: "0 32px",
           minHeight: "280px",
           display: "flex",
