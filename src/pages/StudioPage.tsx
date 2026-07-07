@@ -2,6 +2,7 @@ import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Reveal } from "@/components/ui/Reveal";
 import { TeamCard } from "@/components/studio/TeamCard";
 import { FOUNDER, TEAM_MEMBERS } from "@/constants/brand";
+import teamIMG from "@/images/team-photo.JPG";
 import { C } from "@/constants/colors";
 
 export function StudioPage() {
@@ -10,25 +11,23 @@ export function StudioPage() {
       {/* ── Studio Intro ── */}
       <section style={{ background: C.merino }}>
         <div
-          className="mx-auto flex flex-col md:flex-row"
-          style={{ maxWidth: "1280px", minHeight: "88vh" }}
+          className="mx-auto flex flex-col"
+          style={{ maxWidth: "1280px" }}
         >
           <div
-            className="hidden md:block"
-            style={{ width: "45%", flexShrink: 0, overflow: "hidden", background: C.kangaroo }}
+            style={{ width: "100%", maxWidth: "900px", margin: "0 auto", overflow: "hidden", background: C.kangaroo }}
           >
             <img
-              src="https://images.unsplash.com/photo-1619799090425-0efe92bd62a?w=800&h=1000&fit=crop&auto=format"
+              src={teamIMG}
               alt="Alpana S., Principal Designer"
-              style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+              style={{ width: "100%", height: "auto", objectFit: "cover", display: "block" }}
             />
           </div>
           <div
             style={{
-              flex: 1,
               display: "flex",
               alignItems: "center",
-              padding: "80px 56px 80px 56px",
+              padding: "60px 56px 80px 56px",
             }}
           >
             <div>
@@ -57,7 +56,7 @@ export function StudioPage() {
                     fontFamily: "'DM Sans', sans-serif",
                     fontSize: "15px",
                     color: C.oyster,
-                    maxWidth: "400px",
+                    maxWidth: "700px",
                     lineHeight: 1.85,
                     marginTop: "28px",
                   }}

@@ -197,7 +197,7 @@ export const portfolioTiles: Tile[] = [
     oneliner: "A contemporary loft space blending industrial elements with warm residential comfort.",
     img: amonkarImg,
     heroImage: amonkarHero,
-    brief: "Designed as an exclusive space for relaxation and social gatherings for Amonkar Family, this industrial-inspired loft balances bold architectural character with refined comfort. Exposed steel trusses, warm brick finishes, and ambient lighting create a distinctive atmosphere, while thoughtfully planned lounge and entertainment zones encourage effortless hosting. The result is a sophisticated retreat tailored for leisure, connection, and memorable experiences.",
+    brief: "Designed as an exclusive space for relaxation and social gatherings for Amonkar Family, this loft balances bold architectural character with refined comfort. Exposed steel trusses, warm brick finishes, and ambient lighting create a distinctive atmosphere, while thoughtfully planned lounge and entertainment zones encourage effortless hosting. The result is a sophisticated retreat tailored for leisure, connection, and memorable experiences.",
     approach: "We preserved the industrial bones of the space while introducing warm materials and thoughtful lighting. The layout was reconfigured to create distinct zones for living, working, and entertaining, all connected by an open flow.",
     specs: {
       typology: "Residential",
@@ -225,7 +225,7 @@ export const portfolioTiles: Tile[] = [
     oneliner: "A personalized home designed for modern family living with elegant simplicity.",
     img: anuImg,
     heroImage: anuHero,
-    brief: "A masterclass in transitional design, this residence designed for Mr. Anu and Anand Prabhudesai, seamlessly balances modern sophistication with rustic warmth. By layering earthy textures like exposed brick and rich natural woods against a carefully curated colour palette—highlighted by elegant brass accents—the home transforms into an inviting sanctuary. Every detail is thoughtfully orchestrated to celebrate refined, contemporary living with a distinctively soulful Indian aesthetic.",
+    brief: "A masterclass in transitional design, this residence designed for Mr. and Mrs. Prabhudesai, seamlessly balances modern sophistication with rustic warmth. By layering earthy textures like exposed brick and rich natural woods against a carefully curated colour palette—highlighted by elegant brass accents—the home transforms into an inviting sanctuary. Every detail is thoughtfully orchestrated to celebrate refined, contemporary living with a distinctively soulful Indian aesthetic.",
     approach: "We created a flexible layout with clean lines and neutral tones, allowing the family's personality to shine through through artwork and personal objects. Natural materials and ample storage create a calm, organized environment.",
     specs: {
       typology: "Residential",
@@ -270,7 +270,7 @@ export const portfolioTiles: Tile[] = [
     oneliner: "A sophisticated residence featuring refined interiors and thoughtful spatial planning.",
     img: bhagwatImg,
     heroImage: bhagwatHero,
-    brief: "This residence for Mr. Bhagwat, is the best example of “less is more”. By prioritizing clean geometric forms softened by a palette of rich woods, natural textiles, and artisanal finishes—evident from the tailored living and to the integrated details in the kitchen, the design is profoundly tactile.",
+    brief: "This residence for Mr. and Mrs. Bhagwat, is the best example of “less is more”. By prioritizing clean geometric forms softened by a palette of rich woods, natural textiles, and artisanal finishes—evident from the tailored living and to the integrated details in the kitchen, the design is profoundly tactile.",
     approach: "We reimagined the floor plan to create a more open and connected layout. The material palette was carefully curated to include rich textures and subtle colors, creating a warm and inviting atmosphere throughout the home.",
     specs: {
       typology: "Residential",
@@ -299,7 +299,7 @@ export const portfolioTiles: Tile[] = [
     oneliner: "A contemporary family home designed for modern living and entertaining.",
     img: khannaImg,
     heroImage: khannaHero,
-    brief: "Designed as an immersive, art-first sanctuary for Mr. Khanna, this residence seamlessly elevates everyday living spaces into a sophisticated residential gallery. In the main lounge areas, prominent abstract canvases are paired with precision track and architectural lighting to anchor the neutral-toned upholstery with museum-quality scale.",
+    brief: "Designed as an immersive, art-first sanctuary for Mr. and Mrs. Khanna, this residence seamlessly elevates everyday living spaces into a sophisticated residential art gallery. In the main lounge areas, prominent abstract canvases are paired with architectural lighting to anchor the neutral-toned upholstery with museum-quality scale.",
     approach: "We created an open-plan living area that flows seamlessly into outdoor spaces. The design incorporates smart storage solutions and flexible seating arrangements, making the home adaptable to different needs and occasions.",
     specs: {
       typology: "Residential",
@@ -334,9 +334,9 @@ export const portfolioTiles: Tile[] = [
       typology: "Residential",
       location: "Prisma CHS, JVLR, Mumbai, India",
       yearCompleted: "2024",
-      area: "2,800 sq ft",
-      principal: "Alpana Design",
-      photography: "Alpana Design",
+      // area: "2,800 sq ft",
+      principal: "Alpana S. Design",
+      // photography: "Alpana Design",
     },
     galleryImages: [
       krishnadasG1,
@@ -353,7 +353,7 @@ export const portfolioTiles: Tile[] = [
     oneliner: "A contemporary residence featuring clean lines and sophisticated interiors.",
     img: nileshImg,
     heroImage: nileshHero,
-    brief: "Designed to balance elegance with everyday living, this residence designed for Mr. Nilesh Amonkar, embraces clean lines, warm materials, and thoughtfully curated details. A soothing neutral palette, rich wood accents, and layered textures create spaces that feel both sophisticated and inviting. Every element is crafted to deliver comfort, functionality, and enduring style.",
+    brief: "Designed to balance elegance with everyday living, this residence designed for Mr. Nilesh & Mrs. Sonali Amonkar, embraces clean lines, warm materials, and thoughtfully curated details. A soothing neutral palette, rich wood accents, and layered textures create spaces that feel both sophisticated and inviting. Every element is crafted to deliver comfort, functionality, and enduring style.",
     approach: "We adopted a minimalist approach with careful attention to detail. The spaces are defined by subtle changes in floor level and ceiling height, creating distinct zones without physical barriers.",
     specs: {
       typology: "Residential",
@@ -397,7 +397,7 @@ export const portfolioTiles: Tile[] = [
     oneliner: "A refined home showcasing elegant design principles and quality craftsmanship.",
     img: satyajeetImg,
     heroImage: satyajeetHero,
-    brief: "Drawing from the Enduring appeal of mid-century modernism for Mr. Kelkar, this residence combines simplicity with contemporary comfort, carefully curated details and strong sense of humour defines its distinctive character.",
+    brief: "Drawing from the Enduring appeal of mid-century modernism for Mr. & Mrs. Kelkar, this residence combines simplicity with contemporary comfort, carefully curated details and strong sense of humour defines its distinctive character.",
     approach: "We focused on creating a sense of luxury through restraint. The design features high-quality materials and precise detailing, with each element carefully considered to contribute to the overall harmony of the space.",
     specs: {
       typology: "Residential",
@@ -443,7 +443,7 @@ export const portfolioTiles: Tile[] = [
     oneliner: "A warm and inviting family home designed for comfortable everyday living.",
     img: sundarImg,
     heroImage: sundarHero,
-    brief: "This project designed for Mr. Sundar, serves as a sophisticated exercise in blending deep-rooted South Indian cultural identity with the clean lines of contemporary luxury. Our firm meticulously integrated traditional elements seen in the intricately carved dark wood Pooja shrine and the iconic suspended into a modern shell defined by wall mouldings, premium materials, and curated lighting. The result is a warm, deeply personal environment where heritage informs contemporary living.",
+    brief: "This project designed for Mr. and Mrs. Sundar, serves as a sophisticated exercise in blending deep-rooted South Indian cultural identity with the clean lines of contemporary luxury. Our firm meticulously integrated traditional elements seen in the intricately carved dark wood Pooja shrine and the iconic suspended into a modern shell defined by wall mouldings, premium materials, and curated lighting. The result is a warm, deeply personal environment where heritage informs contemporary living.",
     approach: "We focused on creating comfortable, livable spaces that would accommodate the family's daily routines. The design incorporates durable materials and easy-to-maintain surfaces without compromising on style.",
     specs: {
       typology: "Residential",
@@ -543,7 +543,7 @@ export const portfolioTiles: Tile[] = [
     oneliner: "A contemporary home designed for modern living with elegant simplicity.",
     img: udayImg,
     heroImage: udayHero,
-    brief: "Created to support graceful aging, this residence designed for Mr. Uday Kamat blends comfort, functionality, and sophistication. Every space is thoughtfully designed to foster ease, warmth, and lasting memories. Inspired by Goa's Coastal character, this residence blends natural textures, soft neutral tones and relaxed elegance to create a light filled retreat.",
+    brief: "Created to support graceful aging, this residence designed for Mr. & Mrs. Kamat blends comfort, functionality, and sophistication. Every space is thoughtfully designed to foster ease, warmth, and lasting memories. Inspired by Goa's Coastal character, this residence blends natural textures, soft neutral tones and relaxed elegance to create a light filled retreat.",
     approach: "We created a series of interconnected spaces that flow naturally from one to another. The design emphasizes natural light and incorporates smart home technology to enhance convenience and comfort.",
     specs: {
       typology: "Residential",
@@ -576,12 +576,12 @@ export const portfolioTiles: Tile[] = [
     oneliner: "A contemporary residence featuring warm tones and sophisticated design.",
     img: baligaImg,
     heroImage: baligaHero,
-    brief: "Designed as a warm contemporary living space, this residence balances modern aesthetics with inviting comfort. The design features carefully curated spaces that emphasize natural light, rich textures, and thoughtful details to create a home that feels both sophisticated and welcoming.",
+    brief: "Designed for Mr. & Mrs. Baligas as a warm contemporary living space, this residence balances modern aesthetics with inviting comfort. The design features carefully curated spaces that emphasize natural light, rich textures, and thoughtful details to create a home that feels both sophisticated and welcoming.",
     approach: "We focused on creating warm, inviting spaces through the use of rich materials and a carefully considered color palette. The layout emphasizes flow and connection between different areas of the home.",
     specs: {
       typology: "Residential",
       location: "Mumbai, India",
-      yearCompleted: "2024",
+      yearCompleted: "2025",
       principal: "Alpana S. Design",
     },
     galleryImages: [
@@ -606,6 +606,12 @@ export const portfolioTiles: Tile[] = [
       baligaG17,
       baligaG18,
     ],
+    testimonial: {
+      text: "I feel incredibly fortunate to have entrusted designing my new home  to Alpana and her amazing all-women team. From the very beginning, Alpana, Anagha, Shanti, Saroj, Rutuja, and the entire team understood not just my requirements, but also my lifestyle.As a working woman, I couldn't devote as much time to the project as I would have liked. I chose to place my complete trust in Alpana and her team, giving them the freedom to bring their vision to life. Looking at my home today, I can confidently say it was one of the best decisions I made.They have created a home that is elegant, timeless, and far beyond anything I had imagined. Every corner reflects thoughtful planning, attention to detail, and a genuine passion for design. Their professionalism, creativity, patience, and commitment made the entire journey smooth and stress-free. Even today, I find myself discovering little details that make me appreciate their work even more.What impressed me the most was how the team worked together with such dedication and ownership. It truly felt like they were designing their own home, ensuring that every detail was just right. Today, every time I walk into my home, I smile—and for that, I have Alpana and her wonderful team to thank.The greatest compliment I receive today is when family and friends walk into my home and simply say, 'Wow.' Their admiration reminds me of how fortunate I was to have trusted this amazing team.Thank you, Alpana,Shanti, Anagha, Saroj, Rutuja, and the entire team, for turning my dream into a beautiful reality. I wholeheartedly recommend them to anyone looking for designers who combine creativity, elegance, and exceptional execution. My home is everything I hoped for—and so much more.",
+      author: "Baliga",
+      role: "Homeowner",
+      project: "Warm Contemporary Living",
+    },
   },
   {
     slug: "grand-entrance",
@@ -675,7 +681,7 @@ export const portfolioTiles: Tile[] = [
     specs: {
       typology: "Residential",
       location: "Mumbai, India",
-      yearCompleted: "2024",
+      yearCompleted: "2025",
       principal: "Alpana S. Design",
     },
     galleryImages: [
