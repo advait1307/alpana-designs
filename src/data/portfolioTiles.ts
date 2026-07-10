@@ -682,11 +682,11 @@ export const portfolioTiles: Tile[] = [
       sweetaG5,
       sweetaG6,
       sweetaG7,
-      sweetaG8,
-      sweetaG9,
       sweetaG10,
+      sweetaG9,
+      sweetaG8,
       sweetaG11,
-      sweetaG12,
+      // sweetaG12,
       sweetaHero,
       sweetaImg
     ],
@@ -746,13 +746,13 @@ export const portfolioTiles: Tile[] = [
     galleryImages: [
       satyajeetG1,
       satyajeetG2,
-      satyajeetG3,
       satyajeetG4,
       satyajeetG5,
+      satyajeetG3,
       satyajeetG6,
-      satyajeetG7,
-      satyajeetG8,
       satyajeetHero,
+      satyajeetG8,
+      // satyajeetG7,
       satyajeetImg
     ],
     // testimonial: {

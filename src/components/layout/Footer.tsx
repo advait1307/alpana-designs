@@ -37,7 +37,7 @@ export function Footer() {
                 src={logoSrc}
                 alt="Alpana S. Design wordmark"
                 style={{
-                  height: "200px",
+                  height: "250px",
                   width: "auto",
                   display: "block",
                   objectFit: "contain",
