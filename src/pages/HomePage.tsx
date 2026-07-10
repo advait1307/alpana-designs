@@ -37,6 +37,9 @@ export function HomePage() {
           <img
             src={homepg}
             alt="Warm afternoon light over a chaise lounge in a minimal interior"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
             style={{ width: "100%", height: "80%", objectFit: "cover", display: "block" }}
           />
         </div>

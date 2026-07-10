@@ -53,6 +53,8 @@ export function FlipCard({ tile, onSelect }: { tile: Tile; onSelect: (t: Tile) =
           <img
             src={tile.img}
             alt={tile.name}
+            loading="lazy"
+            decoding="async"
             style={{ width: "100%", display: "block", objectFit: "cover" }}
           />
           <div
