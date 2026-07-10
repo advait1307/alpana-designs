@@ -37,7 +37,7 @@ export const TEAM_MEMBERS = [
 
   },
   {
-    name: "Rutuja Ghoge",
+    name: "Rutuja Ghonge",
     role: "Junior Designer",
     img: rutujaIMG,
     bio: "Rutuja Ghonge is a designer with 4 years of experience. She combines innovative design concepts with practical functionality to create spaces that are timeless, elegant, and uniquely personal — whether designing a cozy residence, a dynamic workplace, or a sophisticated commercial environment.",

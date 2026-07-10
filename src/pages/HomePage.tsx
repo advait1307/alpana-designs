@@ -51,22 +51,40 @@ export function HomePage() {
         >
           <div>
             <Eyebrow>Architecture · Interior Design</Eyebrow>
-            <h1
-              style={{
-                fontFamily: "'Autography', cursive",
-                fontWeight: 400,
-                // fontFamily: "'Cormorant Garamond', serif",
-                // fontWeight: 300,
-                fontSize: "clamp(44px, 5.5vw, 72px)",
-                lineHeight: 1.08,
-                letterSpacing: "0.02em",
-                color: C.cedar,
-                marginTop: "20px",
-                whiteSpace: "pre-line",
-              }}
-            >
-              {"The Space Edit\nBy \nAlpana."}
-            </h1>
+            <div style={{ marginTop: "20px" }}>
+              {/* Primary wordmark — script display */}
+              <h1
+                style={{
+                  fontFamily: "'Autography', cursive",
+                  fontWeight: 400,
+                  fontSize: "clamp(52px, 7.5vw, 70px)",
+                  lineHeight: 1.0,
+                  letterSpacing: "0.01em",
+                  color: C.cedar,
+                  margin: 0,
+                }}
+              >
+                Alpana S. Design
+              </h1>
+              <br />
+              {/* Secondary tagline */}
+              <p
+                style={{
+                  fontFamily: "'Cormorant Garamond', serif",
+                  fontStyle: "italic",
+                  fontWeight: 300,
+                  fontSize: "clamp(16px, 2vw, 50px)",
+                  letterSpacing: "0.04em",
+                  color: C.cedar,
+                  lineHeight: 1.4,
+                  margin: 0,
+                }}
+              >
+                The Space Edit
+                By Alpana.
+              </p>
+
+            </div>
             <p
               style={{
                 fontFamily: "'DM Sans', sans-serif",
@@ -164,13 +182,13 @@ export function HomePage() {
             {[
               {
                 numeral: "I",
-                name: "End-to-End Consultancy",
-                desc: "Design is more than creating beautiful spaces—it is about crafting environments that reflect your personality and enhance the way you live. From the initial consultation to the final handover, we guide every aspect of your project with precision and care.\nOur end-to-end consultancy covers design strategy, space planning, concept development, material curation, budgeting, vendor coordination, project management, site supervision, and quality assurance. Every detail is thoughtfully managed, ensuring a seamless journey and a home that is both timeless and uniquely yours.",
+                name: "Design & Turnkey Execution",
+                desc: "A complete design-to-delivery experience, tailored exclusively for you.\nOur turnkey solutions combine creative excellence with flawless execution, allowing you to enjoy a stress-free transformation of your space. From conceptual design and immersive 3D visualizations to civil modifications, bespoke furniture, lighting, electrical and plumbing works, finishes, furnishings, décor, and final styling, every element is meticulously planned and executed.\nWith a single point of accountability, we deliver interiors that are sophisticated, functional, and move-in ready—crafted with uncompromising attention to quality, craftsmanship, and timelines.",
               },
               {
                 numeral: "II",
-                name: "Design & Turnkey Execution",
-                desc: "A complete design-to-delivery experience, tailored exclusively for you.\nOur turnkey solutions combine creative excellence with flawless execution, allowing you to enjoy a stress-free transformation of your space. From conceptual design and immersive 3D visualizations to civil modifications, bespoke furniture, lighting, electrical and plumbing works, finishes, furnishings, décor, and final styling, every element is meticulously planned and executed.\nWith a single point of accountability, we deliver interiors that are sophisticated, functional, and move-in ready—crafted with uncompromising attention to quality, craftsmanship, and timelines.",
+                name: "End-to-End Consultancy",
+                desc: "Design is more than creating beautiful spaces—it is about crafting environments that reflect your personality and enhance the way you live. From the initial consultation to the final handover, we guide every aspect of your project with precision and care.\nOur end-to-end consultancy covers design strategy, space planning, concept development, material curation, budgeting, vendor coordination, project management, site supervision, and quality assurance. Every detail is thoughtfully managed, ensuring a seamless journey and a home that is both timeless and uniquely yours.",
               },
               {
                 numeral: "III",

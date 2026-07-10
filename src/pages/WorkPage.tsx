@@ -75,7 +75,7 @@ export function WorkPage() {
                 </Reveal>
               ))}
             </div>
-            <div style={{ marginTop: "64px" }}>
+            <div>
               {col2.map((tile, i) => (
                 <Reveal key={i} delay={i * 60 + 30}>
                   <FlipCard tile={tile} onSelect={onProjectSelect} />

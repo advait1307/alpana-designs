@@ -24,6 +24,8 @@ export function ProjectDetailPage({ project }: ProjectDetailPageProps) {
   const currentIdx = portfolioTiles.findIndex((t) => t.name === project.name);
   const nextProject = portfolioTiles[(currentIdx + 1) % portfolioTiles.length];
 
+  // Round-robin distribution keeps column heights balanced for any image count
+  // (columns differ by at most 1 image, avoiding a nearly-empty last column).
   const galCol1 = project.galleryImages
     .map((img, i) => ({ img, i }))
     .filter(({ i }) => i % 3 === 0);
@@ -304,23 +306,23 @@ export function ProjectDetailPage({ project }: ProjectDetailPageProps) {
           </Reveal>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-3 items-start">
             <div>
-              {galCol1.map(({ img, i }) => (
-                <Reveal key={i} delay={i * 40}>
-                  <GalleryPhoto imageUrl={img} globalIndex={i} onClick={openLightbox} />
-                </Reveal>
-              ))}
-            </div>
-            <div style={{ marginTop: "48px" }}>
-              {galCol2.map(({ img, i }) => (
-                <Reveal key={i} delay={i * 40 + 20}>
-                  <GalleryPhoto imageUrl={img} globalIndex={i} onClick={openLightbox} />
+              {galCol1.map(({ img, i }, colIdx) => (
+                <Reveal key={i} delay={colIdx * 30}>
+                  <GalleryPhoto imageUrl={img} globalIndex={i} onClick={openLightbox} priority={i < 3} />
                 </Reveal>
               ))}
             </div>
             <div>
-              {galCol3.map(({ img, i }) => (
-                <Reveal key={i} delay={i * 40 + 40}>
-                  <GalleryPhoto imageUrl={img} globalIndex={i} onClick={openLightbox} />
+              {galCol2.map(({ img, i }, colIdx) => (
+                <Reveal key={i} delay={colIdx * 30 + 10}>
+                  <GalleryPhoto imageUrl={img} globalIndex={i} onClick={openLightbox} priority={i < 3} />
+                </Reveal>
+              ))}
+            </div>
+            <div>
+              {galCol3.map(({ img, i }, colIdx) => (
+                <Reveal key={i} delay={colIdx * 30 + 20}>
+                  <GalleryPhoto imageUrl={img} globalIndex={i} onClick={openLightbox} priority={i < 3} />
                 </Reveal>
               ))}
             </div>
@@ -424,85 +426,87 @@ export function ProjectDetailPage({ project }: ProjectDetailPageProps) {
       )}
 
       {/* ── Section 6: Owner Testimonial ── */}
-      <section style={{ background: C.kangaroo, padding: "120px 32px" }}>
-        <Reveal>
-          <div style={{ maxWidth: "880px", margin: "0 auto", textAlign: "center" }}>
-            <div style={{ position: "relative" }}>
-              <span
-                style={{
-                  position: "absolute",
-                  top: "-48px",
-                  left: "-16px",
-                  fontFamily: "'Cormorant Garamond', serif",
-                  fontWeight: 300,
-                  fontSize: "120px",
-                  color: C.oyster,
-                  opacity: 0.3,
-                  lineHeight: 1,
-                  userSelect: "none",
-                  pointerEvents: "none",
-                }}
-              >
-                "
-              </span>
-              <p
-                style={{
-                  fontFamily: "'Cormorant Garamond', serif",
-                  fontStyle: "italic",
-                  fontWeight: 300,
-                  fontSize: "clamp(20px, 2.8vw, 20px)",
-                  color: C.cedar,
-                  lineHeight: 1.55,
-                  position: "relative",
-                }}
-              >
-                {project.testimonial?.text}
-              </p>
-            </div>
-
-            <div style={{ height: "48px" }} />
-
-            <div style={{ textAlign: "center" }}>
-              <p
-                style={{
-                  fontFamily: "'DM Sans', sans-serif",
-                  fontWeight: 500,
-                  fontSize: "14px",
-                  color: C.cedar,
-                }}
-              >
-                {project.testimonial?.author}
-              </p>
-              <p
-                style={{
-                  fontFamily: "'DM Sans', sans-serif",
-                  fontSize: "10px",
-                  letterSpacing: "0.12em",
-                  textTransform: "uppercase",
-                  color: C.oyster,
-                  marginTop: "4px",
-                }}
-              >
-                {project.testimonial?.role} · {project.testimonial?.project}
-              </p>
-            </div>
-
-            <div style={{ marginTop: "28px", display: "flex", justifyContent: "center", gap: "6px" }}>
-              {Array.from({ length: 5 }).map((_, i) => (
-                <div
-                  key={i}
+      {project.testimonial?.text && (
+        <section style={{ background: C.kangaroo, padding: "120px 32px" }}>
+          <Reveal>
+            <div style={{ maxWidth: "880px", margin: "0 auto", textAlign: "center" }}>
+              <div style={{ position: "relative" }}>
+                <span
                   style={{
-                    width: "6px",
-                    height: "6px",
-                    borderRadius: "50%",
-                    background: C.oyster,
+                    position: "absolute",
+                    top: "-48px",
+                    left: "-16px",
+                    fontFamily: "'Cormorant Garamond', serif",
+                    fontWeight: 300,
+                    fontSize: "120px",
+                    color: C.oyster,
+                    opacity: 0.3,
+                    lineHeight: 1,
+                    userSelect: "none",
+                    pointerEvents: "none",
                   }}
-                />
-              ))}
+                >
+                  "
+                </span>
+                <p
+                  style={{
+                    fontFamily: "'Cormorant Garamond', serif",
+                    fontStyle: "italic",
+                    fontWeight: 300,
+                    fontSize: "clamp(20px, 2.8vw, 20px)",
+                    color: C.cedar,
+                    lineHeight: 1.55,
+                    position: "relative",
+                  }}
+                >
+                  {project.testimonial.text}
+                </p>
+              </div>
+
+              <div style={{ height: "48px" }} />
+
+              <div style={{ textAlign: "center" }}>
+                <p
+                  style={{
+                    fontFamily: "'DM Sans', sans-serif",
+                    fontWeight: 500,
+                    fontSize: "14px",
+                    color: C.cedar,
+                  }}
+                >
+                  {project.testimonial.author}
+                </p>
+                <p
+                  style={{
+                    fontFamily: "'DM Sans', sans-serif",
+                    fontSize: "10px",
+                    letterSpacing: "0.12em",
+                    textTransform: "uppercase",
+                    color: C.oyster,
+                    marginTop: "4px",
+                  }}
+                >
+                  {project.testimonial.role} · {project.testimonial.project}
+                </p>
+              </div>
+
+              <div style={{ marginTop: "28px", display: "flex", justifyContent: "center", gap: "6px" }}>
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <div
+                    key={i}
+                    style={{
+                      width: "6px",
+                      height: "6px",
+                      borderRadius: "50%",
+                      background: C.oyster,
+                    }}
+                  />
+                ))}
+              </div>
             </div>
-          </div>
-        </Reveal>
-      </section>
+          </Reveal>
+        </section>
+      )}
 
       {/* ── Section 7: Next Project CTA ── */}
       <div style={{ height: "1px", background: C.oyster }} />

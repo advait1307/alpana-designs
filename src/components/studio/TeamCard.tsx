@@ -23,7 +23,7 @@ export function TeamCard({
             objectFit: "cover",
             objectPosition: "center 18%",
             display: "block",
-            filter: hov ? "grayscale(0%)" : "grayscale(100%)",
+            filter: hov ? "brightness(1.1)" : "brightness(1)",
             transition: "filter 0.4s ease",
           }}
         />

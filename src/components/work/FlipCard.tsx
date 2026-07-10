@@ -1,9 +1,25 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { C } from "@/constants/colors";
 import type { Tile } from "@/types";
 
+// Hover debounce: card only flips in if the cursor stays for HOVER_INTENT ms.
+// Leaving at any point cancels a pending flip-in, so fast mouse-overs never trigger.
+const FLIP_DURATION = 820;  // ms — CSS transition length
+const HOVER_INTENT = 200;   // ms — cursor must dwell before flip-in starts
+
 export function FlipCard({ tile, onSelect }: { tile: Tile; onSelect: (t: Tile) => void }) {
   const [flipped, setFlipped] = useState(false);
+  const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const handleMouseEnter = () => {
+    if (timer.current) clearTimeout(timer.current);
+    timer.current = setTimeout(() => setFlipped(true), HOVER_INTENT);
+  };
+
+  const handleMouseLeave = () => {
+    if (timer.current) clearTimeout(timer.current);
+    setFlipped(false);
+  };
 
   return (
     <div
@@ -13,15 +29,15 @@ export function FlipCard({ tile, onSelect }: { tile: Tile; onSelect: (t: Tile) =
         marginBottom: "24px",
         breakInside: "avoid",
       }}
-      onMouseEnter={() => setFlipped(true)}
-      onMouseLeave={() => setFlipped(false)}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
       onClick={() => setFlipped((f) => !f)}
     >
       <div
         style={{
           transformStyle: "preserve-3d",
           transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)",
-          transition: "transform 0.5s ease-in-out",
+          transition: `transform ${FLIP_DURATION}ms cubic-bezier(0.45, 0, 0.55, 1)`,
           position: "relative",
         }}
       >

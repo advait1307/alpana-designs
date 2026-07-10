@@ -68,11 +68,13 @@ export function Footer() {
                 fontSize: "11px",
                 letterSpacing: "0.08em",
                 textTransform: "uppercase",
-                color: C.oyster,
+                color: C.white,
                 cursor: "pointer",
                 transition: "color 0.2s",
                 textDecoration: "none",
               }}
+              onMouseEnter={(e) => e.currentTarget.style.color = C.kangaroo}
+              onMouseLeave={(e) => e.currentTarget.style.color = C.white}
             >
               Instagram
             </a>
@@ -82,10 +84,12 @@ export function Footer() {
                 fontSize: "11px",
                 letterSpacing: "0.08em",
                 textTransform: "uppercase",
-                color: C.oyster,
+                color: C.white,
                 cursor: "pointer",
                 transition: "color 0.2s",
               }}
+              onMouseEnter={(e) => e.currentTarget.style.color = C.kangaroo}
+              onMouseLeave={(e) => e.currentTarget.style.color = C.white}
             >
               LinkedIn
             </span>

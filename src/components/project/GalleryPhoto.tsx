@@ -5,10 +5,12 @@ export function GalleryPhoto({
   imageUrl,
   globalIndex,
   onClick,
+  priority = false,
 }: {
   imageUrl: string;
   globalIndex: number;
   onClick: (i: number) => void;
+  priority?: boolean;
 }) {
   const [hov, setHov] = useState(false);
   return (
@@ -25,7 +27,8 @@ export function GalleryPhoto({
       <img
         src={imageUrl}
         alt={`Project photo ${globalIndex + 1}`}
-        loading="lazy"
+        loading={priority ? "eager" : "lazy"}
+        fetchPriority={priority ? "high" : "auto"}
         decoding="async"
         style={{
           width: "100%",

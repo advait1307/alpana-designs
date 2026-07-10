@@ -23,7 +23,7 @@ export function Reveal({
           obs.disconnect();
         }
       },
-      { threshold: 0.07 }
+      { threshold: 0, rootMargin: "300px 0px" }
     );
     obs.observe(el);
     return () => obs.disconnect();
@@ -35,7 +35,7 @@ export function Reveal({
       className={className}
       style={{
         opacity: vis ? 1 : 0,
-        transform: vis ? "translateY(0px)" : "translateY(22px)",
+        transform: vis ? "translateY(0px)" : "translateY(14px)",
         transition: `opacity 0.7s ease ${delay}ms, transform 0.7s ease ${delay}ms`,
       }}
     >
