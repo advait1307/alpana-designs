@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import path from 'path'
 import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
+import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
 
 
 function figmaAssetResolver() {
@@ -23,6 +24,12 @@ export default defineConfig({
     // Tailwind is not being actively used – do not remove them
     react(),
     tailwindcss(),
+    ViteImageOptimizer({
+      jpg: { quality: 82 },
+      jpeg: { quality: 82 },
+      png: { quality: 82 },
+      webp: { lossless: false, quality: 80 },
+    }),
   ],
   resolve: {
     alias: {

@@ -59,7 +59,7 @@ export function Header({ current }: HeaderProps) {
               src={logoSrc}
               alt="Alpana S. Design wordmark"
               style={{
-                height: "204px",
+                height: "225px",
                 width: "auto",
                 display: "block",
                 mixBlendMode: "multiply",

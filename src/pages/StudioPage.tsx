@@ -26,7 +26,12 @@ export function StudioPage() {
           >
             <img
               src={teamIMG}
-              alt="Alpana S., Principal Designer"
+              alt="Alpana Designs studio team"
+              width={1800}
+              height={1200}
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
               style={{ width: "100%", height: "auto", objectFit: "cover", display: "block" }}
             />
           </div>
